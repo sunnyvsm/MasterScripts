@@ -1,0 +1,16 @@
+Decisions about scaling need to be taken based on graphs seen on datadog dashboard
+URL: https://app.datadoghq.com/screen/board
+If there is a consistent latency spike (and too many 503 errors in the adjacent graph), it's the right time for
+scaling up the instances. Identify the region and the AutoScaling Group Name and scale up the group using the
+following sequence:
+
+Browse to https://console.aws.amazon.com/ec2 -> AUTO SCALING -> Auto Scaling Groups -> Select the right AS Group
+-> Right-Click and select Edit -> Modify the right fields to complete the scaling.
+Will be needed to be done for the regions: US East, US West and EUS.
+ 
+Scaling decisions are also based on the peak times for the regions:
+US East Peak Time 4pm EST 12AM EST
+US West Peak 6pm EST 2AM EST
+EU Peak 12pm - 8pm
+
+Need to send emails before/after scaling up and scaling down, to systems 

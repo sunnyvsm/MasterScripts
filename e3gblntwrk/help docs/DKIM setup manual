@@ -1,0 +1,64 @@
+
+v=spf1 mx  ip4:64.18.0.0/20 ip4:8.26.64.0/23 a:smtp.kwetoo.com ip4:91.217.82.135 include:Retailspf.smtp.com include:nets1.spf.messagelabs.com include:nets2.spf.messagelabs.com ~all
+
+ 91.217.82.135 mail-crackers.net
+ 91.217.82.136 blog.mail-crackers.net
+ 91.217.82.137 logirelltech.com
+ 91.217.82.137 logirelltech.com
+ 91.217.82.139 briscattese.in''
+ 
+ 
+ v=spf1 ip4:91.217.82.135 ~all -all +all
+ 
+ v=spf1 mx a ptr ?all
+ 
+ ~all >> soft fail/neutral: this is coukd be considered as spam ( spf =softfail/neutral)
+ -all >> all mail from other than ip/domain assigned will go to spam (spf =fail)
+ +all  >> wil pass all mail to the inbox. (spf= pass) 
+ 
+ 
+ 
+--------------------------------------------------------
+ DKIM steps
+A>genrate DKIM values
+  https://www.port25.com/support/domainkeysdkim-wizard/
+  **use sleector ad date yymmdd**
+ This generates Two values <private key and public key>
+  
+B> Add dkim values to the Domain controller
+ add dkim public key to the Domain controller site in format
+ value :<selector>._domainkey.<domainname>
+ 
+ for e.g: 
+ complete example
+ Name: 20151214._domainkey.help.mail-crackers.net  
+ Value *: "v=DKIM1; g=*;k=rsa;p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo/rKchWQKQqMOp/7H94Fi57EL7mBlfD9ySTeKSaF4DvjdR6n67Cx0wmmu8H60KzJbHSL4ddJ5MpMO9hwsdTXAXPYnXdp+pyjYyTy+EQ71dJ8ra+3hJ6Yj6tD8YFWsuTG5IsqrVnwVoUV3HZpc3u5eDBd14LDqTJ1aC1m9y0awdlWSWPZ7CUDliFjxuNMJk7yQJFmTWPdSdMIucOX4A6rCaYhJWzt26h4tQAnFfj+SPpRLXo8YS0MYWuci7A/x5VPubmCa3ClFMxLSmWvk6y6mfH6Pg2VSbQazMbivPcFhBTJ1r0d9meskxYBrovb0kH1IVbFjwj6Swa63of6ewB07QIDAQAB"
+ 
+ 3> add entry to the server
+ add the file named .like 20151214.help.mail-crackers.net.pem
+ <selector>.domainname.pem
+ copy the private key generated in step 1 in this file , and place this file at location /etc/pmta
+ copy the private key generated in step 1 in this file , and place this file at location /etc/pmta
+-------------------------------------------------------- 
+ 
+ 
+ other important links
+ https://www.port25.com/support/domainkeysdkim-wizard/
+ http://support.postmarkapp.com/article/796-how-can-i-check-if-my-dkim-and-spf-records-are-valid
+ http://mxtoolbox.com/SuperTool.aspx?action=dkim%3amail._domainkey.logirelltech.com.mail-crackers.net&run=networktools# 
+ 
+ 
+ 
+ 
+20150902._domainkey.mail-crackers.net
+v=DKIM1; g=*; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDUYqHstjn1Y/fR9EXcL5ht6HjjO7YDBWpwyl0OIq9nyeqoImWOYQ5fn1KsSl+wi2XzWGitJm3+29Ul+KX3kgX9Wju+mRnTuPlJ80cgv/LBDPF3MY1mfGXO+/Ee1zltipbKmeNMw1dsZGa7i1/hKPXdlcyNcZsMRr9nagmVbq5omQIDAQAB
+ 
+ 
+20151214._domainkey.blog.mail-crackers.net
+v=DKIM1; g=* k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCYhHHWVF619xnhXmqJGAgUxW0X 12nWjt76hpiRvU+XHU7X7Bh/YRgazwU88P8tVBBXQ+aJ/BrXugf0UyJ4GgPEVCnZ rpafa8txEmbkIQtRX5rMg+QoiMhIuzPmetF0PVE6AVHdALaTSGoc24cWFoKYR/Sm nHlvBl8xeNMSU6A1DwIDAQAB
+
+
+
+"v=DKIM1; g=* k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAo/rKchWQKQqMOp/7H94Fi57EL7mBlfD9ySTeKSaF4DvjdR6n67Cx0wmmu8H60KzJbHSL4ddJ5MpMO9hwsdTXAXPYnXdp+pyjYyTy+EQ71dJ8ra+3hJ6Yj6tD8YFWsuTG5IsqrVnwVoUV3HZpc3u5eDBd14LDqTJ1aC1m9y0awdlWSWPZ7CUDliFjxuNMJk7yQJFmTWPdSdMIucOX4A6rCaYhJWzt26h4tQAnFfj+SPpRLXo8YS0MYWuci7A/x5VPubmCa3ClFMxLSmWvk6y6mfH6Pg2VSbQazMbivPcFhBTJ1r0d9meskxYBrovb0kH1IVbFjwj6Swa63of6ewB07QIDAQAB"
+ 
+ 

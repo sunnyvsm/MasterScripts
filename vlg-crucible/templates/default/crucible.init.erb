@@ -1,0 +1,62 @@
+#!/bin/sh
+
+# Source function library.
+<% case node['platform_family'] -%>
+<% when 'rhel' -%>
+. /etc/rc.d/init.d/functions
+<% else -%>
+. /lib/lsb/init-functions
+<% end -%>
+
+# Define some variables
+# Name of app ( JIRA, Confluence, etc )
+APP=crucible
+# Name of the user to run as
+USER=<%= node['vlg-crucible']['user'] %>
+# Location of application's base directory
+BASE=<%= node['vlg-crucible']['installation_path'] %>/crucible
+
+start() {
+  echo "Starting $APP"
+  su -l $USER -c $BASE/bin/start.sh
+  return $?
+}
+
+stop() {
+  echo "Stopping $APP"
+  su -l $USER -c $BASE/bin/stop.sh
+  return $?
+}
+
+case "$1" in
+  # Start command
+  start)
+    start
+    RETVAL=$?
+    ;;
+  # Stop command
+  stop)
+    stop
+    RETVAL=$?
+    ;;
+  # Restart command
+  restart)
+    stop
+    start
+    RETVAL=$?
+    ;;
+  status)
+  piid=`ps -elf | awk '{if ($3=="crucible") print $4}'`
+if [ ! -z $piid ] && [ -e /proc/$piid ] ; then
+    echo "crucible (pid $piid) is running ..."
+	else
+	echo "crucible is stopped"
+		fi
+    ;;
+ *)
+    echo "Usage: $APP {start|restart|stop}"
+    RETVAL=2
+    ;;
+esac
+ 
+exit $RETVAL

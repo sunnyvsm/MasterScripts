@@ -1,0 +1,41 @@
+sample example if i need to monitor memory over instance "192.168.100.110".
+
+--------------------
+hosts file content
+located at "on our nagios server"
+/usr/local/nagios/etc/objects/hosts/data/db.cfg
+
+
+define hostgroup{
+        hostgroup_name          data-db
+        members                 370657-ANTRNDB1.videologygroup.com
+        }
+
+define host{
+        use                     gio-host
+        host_name               370657-ANTRNDB1.videologygroup.com
+        hostgroups              windows
+        alias                   370657-ANTRNDB1
+        address                 192.168.100.110
+        }
+
+---------------------------
+	
+service  file content		
+located at "on over nagios server"
+/usr/local/nagios/etc/objects/services/data/db.cfg
+
+
+define service{
+        use                             data-service
+        hostgroup_name                  data-db
+        service_description             disk c
+        is_volatile                     0
+        check_period                    24x7
+        max_check_attempts              5
+        normal_check_interval           5
+        retry_check_interval            2
+        notification_interval           20
+        notification_period             24x7
+        check_command                   check_nt!USEDDISKSPACE!-l c -w 90 -c 95
+        }

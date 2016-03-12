@@ -1,0 +1,36 @@
+git clone [clone url] directory
+nagios/objects/resources.cfg
+
+git pull  to pull the recent update in the nagios remote repository
+do the changes
+git status [to see the file whihc is changes locallly]
+git add . add the changed file
+git status
+git commit -m "message" to give the message
+git push
+
+/usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg
+
+
+
+
+command to check the c drive over windows host from nagios server
+ /usr/local/nagios/libexec/check_nt -H  192.168.220.244  -p 12489 -v USEDDISKSPACE -d SHOWALL -l c
+
+./check_disk -w 20% -c 10% -p /dev/sda2
+
+[[OVER LINUX]]
+
+Command to check the Remote Nrpe Veriosn
+
+/usr/lib/nagios/plugins/check_nrpe -H REMOTE.SERVER.IP]
+
+/usr/local/nagios/libexec/check_nrpe -H 54.205.236.131
+
+/usr/local/nagios/libexec/check_nrpe -H usorlurh01.lucidmedia.com -c check_disk_local
+
+
+git config --global push.default matching
+
+/usr/local/nagios/libexec/check_nrpe -t 55 -H  usorlzrhprd03.lucidmedia.com -c check_disk
+/usr/local/nagios/libexec/check_nrpe -t 55 -H  usorlzrhprd03.lucidmedia.com -c check_disk_mnt

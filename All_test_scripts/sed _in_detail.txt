@@ -1,0 +1,189 @@
+﻿SED DOCUMENTATION
+
+1.1)SED TO DELETE  LINES FROM A FILE
+
+1.1.a)deleing single,multiple,and in between lines
+
+##SINGLE LINE##
+[sed -i '5d' filename]  ###DELETE 5TH LINE
+[sed -i '5!d' filename]  ###DELETE ALL LINES EXCEPT 5TH
+
+##MULTIPLE LINE##
+
+[sed -i '1d;2d;5d;6d;7d;8d;9d'] ## DELETE LINE 1,2,5,6,7,8,9 ONLY
+[sed -i '1d;2d;5d;6d;7d;8d;9!d'] ## THIS WILL ONLY KEEP 9TH LINE AND WILL DELETE ALL REST
+[sed -i '1d;2d;5d;6d;7!d;8!d;9!d'] ## THIS WONT WORK VALID FOR ONLY ONE LIKE ABOVE
+
+##IN BETWEEN LINES ##
+ [sed -i '10,20 d' filename] ## DELETE LINE FROM 10TH TO 20TH
+ [sed -i '10,20 !d' filename] ## DELETE ALL LINE EXCEPT IN BETWEEN 10 AND 20
+ [sed -i '10,$ d' filename] ## DELETE ALL LINE FROM 10 TILL END OF FILE
+ [sed -i '10,$ !d' filename] ## WILL DELETE ALL LINE EXCEPT FROM 10 TILL EOF
+
+1.1.b) deleting line with a single, multiple, and line in between words word in it
+**NOTE: WHILE SEARCHING WORD ALWAYS USE / / AT START AND END OF WORD
+
+##SINGLE WORD##
+
+[sed '/arpit/ d' filename] ### DELETE LINE WITH ARPIT IN IT
+[sed '/arpit/ !d' filename] ### DELETE ALL LINES EXCEPT LINE WITH ARPIT
+
+##MULTIPLE WORD##
+
+[sed -i '/arpit/,/nagios/ d' filename] ##DELETE LINE IN BETWEEN LINES WITH ARPIT AND NAGIOS
+[sed -i '/arpit/,/nagios/ !d' filename] ## DELETE ALL LINES EXCEPT LINE WITH ARPIT AND NAGIOS
+[sed -i '/arpit/,$ d' filename] ##DELETE ALL LINE FROM ARPIT TO EOF
+
+##IN BETWEEN WORDS ##
+
+[sed -i  '/games/d;/nobody/d;/mailnull/d' filename] ## DELETE LINES WITH GAMES,NOBODY,MAILNULL IN IT 
+[sed -i  '/games/d;/nobody/d;/mailnull/!d' filename] ## DELETE ALL LINES EXCEPT MAILNULL IN IT 
+[sed -i  '/games/d;/nobody/d;/mailnull/d; $ d' filename] ## DELETE LINES WITH GAMES,NOBODY,MAILNULL AND LAST LINE 
+
+
+****FEW MORE OVER *****
+
+##CONDITIONAL DELETE IN SED
+
+Delete the last line ONLY if it contains the pattern 'AIX'
+ [sed i '${/AIX/d}' filename ]
+ 
+Delete the last line ONLY if it contains the pattern 'AIX' or 'Linux' or 'Solaris'
+ [sed -i '${/AIX\|LINUX\|Solaris/ d}' filename]
+
+Delete the lines containing the pattern 'Solaris' only if it is present in the lines from 1 to 4.
+ [sed -i '1.4{/Solaris/d}' filename]
+
+ ►Delete the line containing the pattern 'Unix' and also the next line
+ [sed  -i '/Unix/{N;d;}' filename] ###N command reads the next line in the pattern space. 
+                                        d deletes the entire pattern space which contains the current 
+										and the next line.
+ ►Delete only the next line containing the pattern 'Unix', not the very line
+ [sed -i '/Unix/{N;s/\n.*//}' filename]
+ 
+ 
+►If you did not want to make any changes where the word "apache" occurred, you could simple add a new condition to skip over that line:
+ [ sed '/apache/,/nagios/ {apache/n; s/test/ARPIT/}' test1]
+ 
+ 
+► SIMILARLY if i want to skeip any substituion in range, like if i dont want to replace test from amngo in range of fruit and banana then
+
+example:
+fruit : test
+mango : test
+apache : test
+banana :test
+apple :test
+nagios :test
+
+[sed '/fruit/,/banana/ {/mango/! s/test/ARPIT/}' filename]
+
+o/p:
+fruit : ARPIT
+mango : test
+apache : ARPIT
+banana :ARPIT
+apple :test
+naeios :test
+
+►SIMILARLY if i want to skip any substituion in range, like if i dont want to replace test from fruit and from banana in range of fruit and banana then
+
+
+[sed '/fruit/,/banana/ {/fruit\|banana/! s'/test/ARPIT/'}' fielname]
+
+o/p:
+fruit : test
+mango : ARPIT
+apache : ARPIT
+banana :test
+apple :test
+naeios :test
+
+
+
+ n unlike N is used to actually shift over next line
+ 
+►Delete the line containing the pattern 'Linux', also the line before the pattern:
+====my guess=====
+[sed '/Linux/{s/.*//;x;d};x;${x}' filename]
+here lets assume we have file 
+{
+Cygwin
+Unix
+Linux
+Solaris
+AIX
+tyrty
+rty
+try
+tryr
+t
+Linux
+jhgjghjg
+ghjgh
+
+
+**
+Now here first Linux keyword is searched and made null 
+at this time location of x is at the position above the Linux so ";x;d" this will delete the x current value 
+so the curly bracket will null the linux and delete its prior value , 
+later on ;x will get concat with the rest of the values of the file and hence 
+"${x}" will print all except Linux and its prior values
+
+
+so the output will be
+
+Cygwin
+Solaris
+AIX
+tyrty
+rty
+try
+tryr
+jhgjghjg
+ghjgh
+
+===============
+
+===From site====
+
+[sed -n '/Linux/{s/.*//;x;d;};x;p;${x;p;}' file | sed '/^$/d']
+
+|| A little tricky ones. In order to delete the line prior to the pattern,we store every line in a buffer called as hold space. Whenever the pattern matches, we delete the content present in both, the pattern space which contains the current line, the hold space which contains the previous line.
+   Let me explain this command: 'x;p;' ; This gets executed for every line. x exchanges the content of pattern space with hold space. p prints the pattern space. As a result, every time, the current line goes to hold space, and the previous line comes to pattern space and gets printed. When the pattern /Linux/ matches, we empty(s/.*//) the pattern space, and exchange(x) with the hold space(as a result of which the hold space becomes empty) and delete(d) the pattern space which contains the previous line. And hence, the current and the previous line gets deleted on encountering the pattern Linux. The ${x;p;} is to print the last line which will remain in the hold space if left.
+  The second part of sed is to remove the empty lines created by the first sed command. ||
+
+  
+►Delete only the line prior to the line containing the pattern  'Linux', not the very line:
+===My guess===
+so its pretty clear that if we want to delete only word prior to linux then we only have to not null linux rest all remain same
+[sed '/Linux/{x;d};x;${x}' filename]
+
+***
+here we first searched keyword linux now as x is at the location prior to linux so we deleted it and rest get concat with file remaining value
+${x} gives us all except Linux prior values
+============
+
+===from site===
+[sed -n '/Linux/{x;d;};1h;1!{x;p;};${x;p;}' filename]
+
+This is almost same as the last one with few changes. On encountering the pattern /Linux/, we exchange(x) and delete(d). As a result of exchange, the current line remains in hold space, and the previous line which came into pattern space got deleted.
+    1h;1!{x;p;} -  1h is to move the current line to hold space only if it first line. Exchange and print for all the other lines. This could easily have been simply: x;p . The drawback is it gives an empty line at the beginning because during the first exchange between the pattern space and hold space, a new line comes to pattern space since hold space is empty.
+========
+
+
+►Delete the line containing the pattern 'Linux', the line before, the line after:
+ ===MY Guess===
+[sed '/Linux/{N;s/.*//;x;d};x;${x}'] filename]
+or
+[sed '/Linux/{N;s/\n.*//;s/Linux//;x;d};x;${x}' eg1 | sed '/^$/d']
+ 
+ here i first searched Linux then with "N" with hold the current values as well its next values is used and then from "N" 
+ the next values is made null, 
+ and after the procedure is same like example where we need to delet the linux as weel as its prior value
+ 
+ =====From site===
+[sed -n '/Linux/{N;s/.*//;x;d;};x;p;${x;p;}' file | sed '/^$/d']
+
+
+ 

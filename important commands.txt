@@ -1,0 +1,55 @@
+############ IMPORTAMT COMMANDS ############
+==[ftp data transfer from remote hosts]==
+wget -r --user="user@login" --password="Pa$$wo|^D" ftp://server.com/
+
+==[attaching an volume to ec2 instance]==
+lsblk #to see attached volumes to the instance
+mkfs -t ext4 /dev/xvdf. #formatting the volume with ext4 file system
+
+===[adding other filesyetem path to html configuration file]===
+
+Alias  "/arpit" "/tmp/folder"
+
+====[chef-solo installation]====
+1> curl -L https://www.opscode.com/chef/install.sh | bash
+	chef-solo -v #check chef-solo version after installation
+2> mkdir .chef #create an knife.rb file
+ echo "cookbook_path [ '/root/chef-repo/cookbooks' ]" > .chef/knife.rb
+  echo "cookbook_path [ '/d/Arpit/chef-repo-15-19-04/chef-repo/.chef' ]" > .chef/knife.rb
+3> vim $chef-solo/chef-repo/solo.rb
+	file_cache_path "/d/Arpit/chef-repo-15-19-04/chef-repo"
+	cookbook_path "//d/Arpit/chef-repo-15-19-04/chef-repo/cookbooks" 
+4> 	vim $chef-solo/chef-repo/web.json
+	{
+		"run_list": [ "recipe[apt]", "recipe[phpapp]" ]
+	}
+5> chef-solo -c solo.rb -j web.json
+
+========[ importing an .sql file in database ]=============
+
+1> mysql -u username -p database_name < file.sql 
+
+
+=======[BUMPING AN COOKBOOK]=================
+
+1> knife spork bump vlg-bamboo-server
+
+=======[dependdecies e3gblntwrk]=================
+dependencies for the project
+yum install php-gd
+rpm -Uvh http://dl.fedoraproject.org/pub/epel/5/i386/epel-release-5-4.noarch.rpm
+yum install php53-mcrypt
+
+
+============[knife ec2 command]==============
+for installing knife -ec2 command
+yum install gcc g++ make autoconf
+yum -y install  ruby-devel rubygems
+/opt/chef/embedded/bin/gem install knife-ec2
+
+
+===============================================
+knife ec2 server create -I ami-f0091d91 --bootstrap-version 11.16.4 --security-group-ids sg-a62807c2 --subnet subnet-b162ddc6 --associate-public-ip --ssh-key test-machine -f t2.micro --ssh-user ec2-user --identity-file ../keypair/test-machine.pem -N node_test2  --run-list recipe[e3gblntwrk] --region=us-west-2 --environment production  --tags Platform=Linus,Owner=e3gblntwrk,Name=node_test1,Environment=production
+
+
+knife bootstrap 52.32.189.171 --bootstrap-version 11.16.4 --ssh-user ec2-user --sudo --identity-file ../keypair/test-machine.pem -N node_test1 --run-list recipe[e3gblntwrk] --environment Sending 

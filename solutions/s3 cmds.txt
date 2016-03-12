@@ -1,0 +1,12 @@
+=============================================
+S3 COMMAND TO COPY/MOVE FILES ACROSS FIOLDERS
+IN BUCKETS
+=============================================
+
+s3cmd --recursive cp s3://vg-eu-west-1-logs/tsv/DPInfoLogs/y=2014/m=01/d=14/h=19 s3://vg-eu-west-1-logs/tsv/DPInfoLogs/y=2014/m=12/d=10/h=02 
+
+=============================================
+S3 COMMAND TO DOWNLOAD THE FILES FROM FOLDER
+=============================================
+
+sc3cmd --recursive get s3://vg-eu-west-1-logs/tsv/DPInfoLogs/y=2014/m=12/d=10/h=02 

@@ -1,0 +1,6 @@
+#!/bin/bash
+#script to sort the instances info for aws-ec2
+echo "PLease input the file to sort"
+read var
+cat "$var"| awk '{if($1 == "INSTANCE") if ($6 == "running" || $5 =="running") print $1,$2,$3,"running"} match($9,/[(a-zA-Z0-9){1,2}]\./){ print  "   "$9} match($7,/[(a-zA-Z0-9){1,2}]\./){ print  "   "$7} match($8,/[(a-zA-Z0-9){1,2}]\./){ print  "   "$8}{if ( $12 == "windows") print "   "$14,$15 ;if($11 == "windows") print "   "$13,$14;if ( $11 == "monitoring-disabled") print "   "$12,$13  ; else if ($13 =="monitoring-disabled") print "   "$14,$15;else if ($14 =="monitoring-disabled") print "   "$15,$16 ;else if(($1 == "TAG") && (($4 == "Platform") || ($4 == "Owner")))print "   "$1,$4,$5}' | grep -v "instance-store"
+

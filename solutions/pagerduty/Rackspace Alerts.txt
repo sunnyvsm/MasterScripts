@@ -1,0 +1,31 @@
+PagerDuty Alert:
+
+Service: Rackspace Alerts
+Description: ALERT:OPSMGR:397626:Service Terminated Unexpectedly
+
+Reference PagerDuty Incident: #7173
+
+You should receive a corresponding Rackspace Ticket as well: For example:
+
+Ticket #:   140816-04139
+Subject:    ALERT:OPSMGR:397626:RS Alert - Base OS Service Failed:Service Terminated Unexpectedly
+Status:     New
+Account #:  812564 (Videology, Inc.)
+Computer #: 397626-APP4.W.dfw1.P.tidaltv.com (397626)
+
+Rackspace is a "Cloud Service Provider" like Amazon. Videology uses services from Rackspace to host instances which 
+serve databases, some critical application services and websites. The Cybage team will soon have a Rackspace account enabled for them.
+
+General Procedure to take care of a PagerDuty alert for a service hosted on a Rackspace instance:
+
+1. Identify the host address and the failed service (if any) based on the PagerDuty alert and the corresponding 
+Rackspace ticket email.
+2. Log in to the host using "Remote Desktop Connection Manager" (if it's a Windows instance).
+3. Access the "Services" console via "Control Panel" -> "Administrative Tools" -> Services.
+4. Restart the failed service and ensure that it comes up.
+5. Update the Rackspace ticket with the actions taken.
+
+Brief details about the specific PagerDuty alert given above:
+
+The alert given above is related to "MRC Audit Hourly Report". MRC stands for "Media Rating Council" which does
+audits about the Advertisement Services provided by Ad Service Providers. The above alert relates in some way to MRC Audit Reports and the expected action to be taken to resolve it is to restart the corresponding service on the Windows instance via "Services" console.

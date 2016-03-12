@@ -1,0 +1,5 @@
+#!/bin/bash
+#program to calculate the UUCOS occurances
+echo "create a tmp file with data to sort in same folder of this script"
+sleep .25
+clear; cat tmp | awk '{count=0;for (i = 0; i < NR; i++) ;if ( $NF == 5) e++; else if ( $NF == 2) b++; else if ( $NF == 1) a++; else if ( $NF == 3) c++; else if ( $NF == 4) d++}END{print "\n------------------------""\nUUCOS  |  OCCURANCES" "\n------------------------""\n 1    |  " a"\n 2    |  " b"\n 3    |  " c"\n 4    |  " d"\n 5    |  " e  "\n------------------------"}'

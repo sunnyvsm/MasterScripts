@@ -1,0 +1,277 @@
+Instructions given by James on June 10th 2014
+========================================================================================================
+
+
+1. Steps to handle "ERROR: campaignStatsStore Last Update: <Greater Than 1200 Seconds>"
+
+Error Description/Significance:
+
+Action (In Brief): Restart the Tomcat Service on the host listed in the nagios alert
+
+Action in detail:
+Execute the manage-deploy script with the appropriate arguments on the mgmt server. 
+
+# manage-deploy --action=restart-tomcat -s=<server_name>
+
+(Example: manage-deploy -a=restart-tomcat -s=usorlurh03)
+
+Press "y" to confirm or the script may time out. 
+ignore the negative numbers.
+
+The tomcat service will stop and then restart. This may take 7 to 10 minutes. The tomcat service listens at port
+9030. Do not execute this script for more than one server_host at a time.
+
+How to check that the problem has been resolved:
+Open http://usorlupx01.lucidmedia.com:8162/lbstats in a browser. This URL shows the status of ha-proxy hosts.
+
+URLS:
+usorlupx01.lucidmedia.com:8162/lbstats
+usorlurh03.lucidmedia.com:9030/status
+
+Other ways to check the status ?? Where do I see the "status/ready=1" text to confirm that the service has come up. ?
+"Classifier Manager" ??
+
+Notes: The platform "Lucy" is a category of servers which serve "Static Display Ads".
+
+Additional Important Notes:
+If this error is observed only on a single host then the above Action will help in solving the problem.
+If it's observed on multiple hosts of the same type (can be identified based on the name of the hosts), then the
+error is "Queue-Related". You need to restart the activemq service in the correct order which is decided by the
+region to which the servers belong to.
+ 
+If the error is observed in usva then
+
+# service activemq restart 
+	on usvalumq01
+
+If the error is observed on either of usor, awsu or awsa then 
+on usvalumq01
+# service activemq stop
+ on either of usorlumq01, awsumq01 or awsamq01
+# service activemq restart
+ and then on usvalumq01
+# service activemq start
+
+
+
+
+
+2. ERROR- Application Log Exception, Before <---->, After <---->
+
+Error Significance: Ad Server is serving a lot of exception errors. It's a critical error.
+
+Action: Contact James
+
+Notes: The application is installed under "/home/lucidmedia/ClickSense" . The logs are located under 
+"/home/lucidmedia/ClickSense/local/logs". Doing a "less application*.log" for the appropriate log file may give more
+info about the error.
+
+
+3. Disk /mnt is CRITICAL
+
+Error Description/Significance:
+The disk usage on the /mnt mount point is getting close to 100%. Logs which are supposed to be uploaded to an 
+appropriate S3 bucket are not getting uploaded for some reason. The archival of the logs is not happening.
+
+Action: There are a lot of Log Management Scripts which take care of managing the application logs.
+They get executed as cron jobs and are listed in the crontab for the user "lucidmedia". Executing these scripts
+manually won't cause any harm.
+
+
+
+4. manage-cluster-v1.sh script:
+
+It launches instances based on a base image.
+
+
+ 
+5. EC2_AdServer_AdServer Files Issue
+
+if you get an email that looks like this:
+
+-----Original Message-----
+From: alert.norep@videologygroup.com [mailto:alert.norep@videologygroup.com]
+Sent: Sunday, June 08, 2014 1:10 PM
+To: Monitoring
+Subject: EC2_AdServer_AdServer Files Issue (10.254.9.80)
+
+10.254.9.80 - cf: 35 - s3cf: 0
+
+Action: Find the host out and "reboot" via the AWS Console
+
+
+6. Last Update: JIT LM Mappings	Last Update: JIT LM Mappings
+
+Action: This will be the same process as the Campaign updates
+
+
+
+
+7. Scaling
+
+Decisions about scaling need to be taken based on graphs seen on datadog dashboard
+URL: https://app.datadoghq.com/screen/board
+If there is a consistent latency spike (and too many 503 errors in the adjacent graph), it's the right time for
+scaling up the instances. Identify the region and the AutoScaling Group Name and scale up the group using the
+following sequence:
+
+Browse to https://console.aws.amazon.com/ec2 -> AUTO SCALING -> Auto Scaling Groups -> Select the right AS Group
+-> Right-Click and select Edit -> Modify the right fields to complete the scaling.
+Will be needed to be done for the regions: US East, US West and EUS.
+ 
+Scaling decisions are also based on the peak times for the regions:
+US East Peak Time 4pm EST 12AM EST
+US West Peak 6pm EST 2AM EST
+EU Peak 12pm - 8pm
+
+Need to send emails before/after scaling up and scaling down, to systems 
+
+=====================================================================
+
+8.application.log <ERROR: Application Log Size: 56 MB>
+
+ps -ef | grep java
+sudo kill -9 <PID> once every java process is killed
+start the services by doing
+service tomcat start
+sudo service datadog-agent start
+clear the log
+
+=====================================================================
+
+9.for couch base server error
+
+First we start a r3.8xlarge – Root partition needs to be 30gb add 800gb IOPS provisioned EBS drive. Then we run the following script to setup the node. Below is a script to configure an instance also the line here is something you can use to spin up an instance (needs debugging as it didn’t work for me) 
+ 
+ec2-run-instances ami-e08efbd0 --region us-west-2 -n 1 -k TechOps-USwest2 -g sg-cfa94faa  -f user_defined_dmp.sh  --instance-type r3.8xlarge -b "/dev/xvdb=:800:true:io1:4000" -b "/dev/xvdc=:20:true:io1:600" -b "/dev/sda1=:50" --placement-group "DMP OCS" --subnet subnet-42a4b820 --associate-public-ip-address true
+ 
+ 
+ 
+ 
+ 
+#!/bin/bash
+yum -y install nscd
+service nscd restart
+service ntpd restart
+service iptables stop
+chkconfig nscd on
+chkconfig ntpd on
+chkconfig cups off
+chkconfig iptables off
+chkconfig postfix off
+chkconfig ip6tables off
+mkdir -p  /data/mount2
+sed -i '/xvdb/d' /etc/fstab
+echo "/dev/xvdb /opt  ext4 noatime,nodiratime 0 0" >> /etc/fstab
+echo "/dev/xvdc /data/mount2  ext4 noatime,nodiratime 0 0" >> /etc/fstab
+echo " /data/mount2/swapfile    none    swap    defaults        0       0" >> /etc/fstab
+cat /etc/fstab | grep ext4 | grep -v LABEL |  cut -d' ' -f1 | xargs -I{} -P 8 mkfs.ext4 {}
+ 
+fallocate -l 10G /data/mount2/swapfile
+chmod 600 /data/mount2/swapfile
+mkswap /data/mount2/swapfile
+swapon /data/mount2/swapfile
+mount -a
+ 
+ 
+ 
+echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
+echo " net.ipv6.conf.default.disable_ipv6 = 1 " >> /etc/sysctl.conf
+echo " net.ipv6.conf.lo.disable_ipv6 = 1  " >> /etc/sysctl.conf
+echo "vm.swappiness = 0" >> /etc/sysctl.conf
+ 
+echo "never" > /sys/kernel/mm/transparent_hugepage/defrag
+echo "never" > /sys/kernel/mm/transparent_hugepage/enabled
+echo "7f"  >  /sys/devices/virtual/net/lo/queues/rx-0/rps_cpus
+echo "1"  > /proc/sys/net/ipv4/tcp_low_latency
+#echo "SELINUX=disabled" > /etc/selinux/config
+echo -e "\n IPV6INIT=no" >>  /etc/sysconfig/network
+#echo "mapred           ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
+sysctl -p
+#(echo d; echo n; echo p; echo 1; echo ; echo ; echo w) | fdisk /dev/xvda
+ 
+awk '/bin\/sh/{print; print "echo never | sudo tee /sys/kernel/mm/redhat_transparent_hugepage/defrag\n echo never | sudo tee /sys/kernel/mm/redhat_transparent_hugepage/enabled\n echo "7f"  | sudo tee /sys/devices/vif-0/net/eth0/queues/rx-0/rps_cpus  \n echo "1"  | sudo tee /proc/sys/net/ipv4/tcp_low_latency "  ;next }1 ' /etc/rc.local > /etc/rc.local.1
+mv /etc/rc.local.1 /etc/rc.local
+ 
+wget http://packages.couchbase.com/releases/2.2.0/couchbase-server-community_2.2.0_x86_64.rpm -P /opt/
+rpm -ivh /opt/couchbase-server-community_2.2.0_x86_64.rpm
+service couchbase-server restart
+ 
+#shutdown -r 2
+
+============================================================================================================================================
+
+10.LATENCY ISSUE
+
+Take the following action if you see latency in the US-West or US-East Data Centers.
+ 
+Let us take the e.g. for US-West
+When there is latency you will get an alert - The latency on the ELB in US-West was at 1s or higher for the last 10 minutes
+
+
+Use this dashboard - https://app.datadoghq.com/dash/dash/19993?live=true&from_ts=1408111456381&to_ts=1408115056381&tile_size=m to monitor AdServer performance in West if there is any latency related issue. See graph below.
+ 
+The ELB Latency will probably over 1s (1000 ms) and co-relate this with the Contextual Targeting Timeout graph below.
+If you see a spike in the latency and a spike in the timeouts then call the person-on-call and he will walk you through the action to be taken the first time. Record it for your team members. You will own it in future.
+ 
+I have described the actions below this chart.
+
+1.      Switch off contextual targeting
+a.      Browse in S3 to the folder vg-configs/us-oregon/adserverconfig/AdserverDynamicConfig.config
+b.      Download it
+c.      Change EnableContextualTargeting="true" to EnableContextualTargeting="false"
+d.      Verify the XML using a tool like http://www.w3schools.com/xml/xml_validator.asp
+e.      Generate the new MD5 File.
+f.      Upload the AdserverDynamicConfig.config followed by the AdserverDynamicConfig.md5
+g.      To keep it simple we may just swap the files to avoid steps c to e
+2.      Verify in a few minutes (can take up to 15) that the file is on the aderver in location C:\inetpub\wwwroot\TidalTv\Adserver2.0\ConfigurationFiles
+3.      Verify that adserver logs are coming in C:\tidaltv\prod\EventLogs3.0\EventLogs\tsvAdserverLog
+4.      Verify that there aren’t any errors related to the change C:\tidaltv\prod\EventLogs2.0\EventLogs\ERR
+5.      Monitor that the latency goes down … the timeouts should go to close to ZERO since it should no longer be called.
+a.      Note Datadog is atleast 5 minutes behind
+b.      Use CloudWatch for near real time data
+ 
+This will be changed to false.
+
+Note –
+1.      For US-East the Dashboard is https://app.datadoghq.com/dash/dash/14322?live=true&from_ts=1405526351653&to_ts=1408118351653&tile_size=m
+2.      Bucket is vg-configs/us-east-1/adserverconfig
+ 
+================================================================================================================================================
+
+11. Rackspace Alerts
+
+
+PagerDuty Alert:
+
+Service: Rackspace Alerts
+Description: ALERT:OPSMGR:397626:Service Terminated Unexpectedly
+
+Reference PagerDuty Incident: #7173
+
+You should receive a corresponding Rackspace Ticket as well: For example:
+
+Ticket #:   140816-04139
+Subject:    ALERT:OPSMGR:397626:RS Alert - Base OS Service Failed:Service Terminated Unexpectedly
+Status:     New
+Account #:  812564 (Videology, Inc.)
+Computer #: 397626-APP4.W.dfw1.P.tidaltv.com (397626)
+
+Rackspace is a "Cloud Service Provider" like Amazon. Videology uses services from Rackspace to host instances which 
+serve databases, some critical application services and websites. The Cybage team will soon have a Rackspace account enabled for them.
+
+General Procedure to take care of a PagerDuty alert for a service hosted on a Rackspace instance:
+
+1. Identify the host address and the failed service (if any) based on the PagerDuty alert and the corresponding 
+Rackspace ticket email.
+2. Log in to the host using "Remote Desktop Connection Manager" (if it's a Windows instance).
+3. Access the "Services" console via "Control Panel" -> "Administrative Tools" -> Services.
+4. Restart the failed service and ensure that it comes up.
+5. Update the Rackspace ticket with the actions taken.
+
+Brief details about the specific PagerDuty alert given above:
+
+The alert given above is related to "MRC Audit Hourly Report". MRC stands for "Media Rating Council" which does
+audits about the Advertisement Services provided by Ad Service Providers. The above alert relates in some way to MRC Audit Reports and the expected action to be taken to resolve it is to restart the corresponding service on the Windows instance via "Services" console.
+
+==================================================================================================================================================

@@ -1,0 +1,23 @@
+STEPS TO FIX
+
+1. Identify the region in which the problem is being observed. Example: “DMP Timeouts are HIGH IN USE” indicates a problem in US-East.
+
+2. Log in to the Management host mgmt.lucidmedia.com using any SSH client.
+
+3. Access the relevant “HAProxy Statistics” dashboard for DMP hosts via a browser.
+
+US-East: 	
+
+US-West: http://usorlzpx01.lucidmedia.com:8162/lbstats
+
+4. Select two hostnames randomly from the list DMP hostsunder the “dmp” section in this dashboard and execute the manage-deploy script on the Management Host for restarting the tomcat service on those hosts.
+
+Example:
+
+$ manage-deploy -a=restart-tomcat -s=usvalzrhprd01,usvalzrhprd02
+
+5. Type "yes" to confirm or the script may time out. The progress of the script can be seen on the console.
+
+6. After completion of the above step, wait for a while to check whether the alerts continue to occur. In case they do, then select the next two hosts from the “HAProxy Statistics” dashboard and execute the “manage-deploy’ script for them as mentioned in step 4.
+
+7. Continue this procedure till the error alert stops occurring.

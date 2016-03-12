@@ -1,0 +1,58 @@
+
+First we start a r3.8xlarge – Root partition needs to be 30gb add 800gb IOPS provisioned EBS drive. Then we run the following script to setup the node. Below is a script to configure an instance also the line here is something you can use to spin up an instance (needs debugging as it didn’t work for me) 
+ 
+ec2-run-instances ami-e08efbd0 --region us-west-2 -n 1 -k TechOps-USwest2 -g sg-cfa94faa  -f user_defined_dmp.sh  --instance-type r3.8xlarge -b "/dev/xvdb=:800:true:io1:4000" -b "/dev/xvdc=:20:true:io1:600" -b "/dev/sda1=:50" --placement-group "DMP OCS" --subnet subnet-42a4b820 --associate-public-ip-address true
+ 
+ 
+ 
+ 
+ 
+#!/bin/bash
+yum -y install nscd
+service nscd restart
+service ntpd restart
+service iptables stop
+chkconfig nscd on
+chkconfig ntpd on
+chkconfig cups off
+chkconfig iptables off
+chkconfig postfix off
+chkconfig ip6tables off
+mkdir -p  /data/mount2
+sed -i '/xvdb/d' /etc/fstab
+echo "/dev/xvdb /opt  ext4 noatime,nodiratime 0 0" >> /etc/fstab
+echo "/dev/xvdc /data/mount2  ext4 noatime,nodiratime 0 0" >> /etc/fstab
+echo " /data/mount2/swapfile    none    swap    defaults        0       0" >> /etc/fstab
+cat /etc/fstab | grep ext4 | grep -v LABEL |  cut -d' ' -f1 | xargs -I{} -P 8 mkfs.ext4 {}
+ 
+fallocate -l 10G /data/mount2/swapfile
+chmod 600 /data/mount2/swapfile
+mkswap /data/mount2/swapfile
+swapon /data/mount2/swapfile
+mount -a
+ 
+ 
+ 
+echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf
+echo " net.ipv6.conf.default.disable_ipv6 = 1 " >> /etc/sysctl.conf
+echo " net.ipv6.conf.lo.disable_ipv6 = 1  " >> /etc/sysctl.conf
+echo "vm.swappiness = 0" >> /etc/sysctl.conf
+ 
+echo "never" > /sys/kernel/mm/transparent_hugepage/defrag
+echo "never" > /sys/kernel/mm/transparent_hugepage/enabled
+echo "7f"  >  /sys/devices/virtual/net/lo/queues/rx-0/rps_cpus
+echo "1"  > /proc/sys/net/ipv4/tcp_low_latency
+#echo "SELINUX=disabled" > /etc/selinux/config
+echo -e "\n IPV6INIT=no" >>  /etc/sysconfig/network
+#echo "mapred           ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
+sysctl -p
+#(echo d; echo n; echo p; echo 1; echo ; echo ; echo w) | fdisk /dev/xvda
+ 
+awk '/bin\/sh/{print; print "echo never | sudo tee /sys/kernel/mm/redhat_transparent_hugepage/defrag\n echo never | sudo tee /sys/kernel/mm/redhat_transparent_hugepage/enabled\n echo "7f"  | sudo tee /sys/devices/vif-0/net/eth0/queues/rx-0/rps_cpus  \n echo "1"  | sudo tee /proc/sys/net/ipv4/tcp_low_latency "  ;next }1 ' /etc/rc.local > /etc/rc.local.1
+mv /etc/rc.local.1 /etc/rc.local
+ 
+wget http://packages.couchbase.com/releases/2.2.0/couchbase-server-community_2.2.0_x86_64.rpm -P /opt/
+rpm -ivh /opt/couchbase-server-community_2.2.0_x86_64.rpm
+service couchbase-server restart
+ 
+#shutdown -r 2

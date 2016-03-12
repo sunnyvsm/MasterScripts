@@ -1,0 +1,44 @@
+
+Hi all, 
+
+Yogesh and me had a skype call today with Sanjeev and below are the discussed points. Latter he will clarify in details about these. 
+
+Short term Task - Verify the Logs in Ad Server
+======================
+
+We need to verify the Ad server Logs during the deployment
+
+Basically the Ad servers are distributed in 4 Regions on AWS Videology Account.
+          
+o	N. Virginia
+o	Oregon
+o	Singapore
+o	Tokyo
+          
+You Just have to go to the AWS Console and search phrase for prod logger - vdlgprd. You will able to see some instances. 
+
+Logon to any of the server in the list. 
+
+After getting the desktop go to the path - C:\tidaltv\prod\EventLogs3.0\EventLogs\tsvClickStream
+
+Verify that the log tsvClickStream in the folder is getting refreshed frequently. 
+
+For Tokyo Region currently they have 4 Ad instances. You need to verify all the instances as they are very important. 
+
+
+How to resolve Pagerduty Alert - HealthCheck EMail
+===================================
+
+To resolve the issue login to the instance for which you are getting the alert. 
+
+After login to the server go to the path -  C:\tidaltv\prod\cache
+
+Verify the time stamp of the cache file for which you are getting alert. For eg: “CacheAgeMonitor FlightMediaPlacementPayoutCache”
+
+If that is not updated one then go to Task Scheduler > Run the "Logger 1 Minute Pull" task. 
+
+Verify again the time stamp after the task “Logger 1 Minute Pull” finished. If it's still showing the old time stamp then login to another server and copy that file FlightMediaPlacementPayoutCache.proto to the instance. 
+
+As we did this task manually, we have to edit the file FlightMediaPlacementPayoutCacheMarker.txt in an editor and make some change in the file and save it. 
+
+Then the alert should get resolved aromatically.

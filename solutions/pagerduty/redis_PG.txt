@@ -1,0 +1,33 @@
+for i in `seq -w 6301 6325`; do /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-$i.conf; done
+[lucidmedia@awsumm01:~]$ ps faux | grep redis
+500 15330 0.0 0.0 103240 832 pts/1 S+ 03:11 0:00 \_ grep redis
+500 15224 9.2 0.4 72748 35460 ? Dsl 03:11 0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6301.conf
+500 15228 7.8 0.3 68652 29944 ? Dsl 03:11 0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6302.conf
+500 15232 8.0 0.4 68652 31192 ? Dsl 03:11 0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6303.conf
+500 15236 5.5 0.2 60460 22052 ? Dsl 03:11 0:00 /us
+r/local/redis/bin/redis-server /usr/local/redis/data/redis-6304.conf
+500      15240  9.1  0.4  68652 33100 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6305.conf
+500      15244  7.1  0.3  64556 27024 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6306.conf
+500      15248  7.0  0.3  64556 26560 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6307.conf
+500      15252  9.3  0.3  64556 28016 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6308.conf
+500      15256  8.3  0.3  64556 27520 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6309.conf
+500      15260  7.3  0.3  64556 24664 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6310.conf
+500      15264  8.1  0.3  64556 26908 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6311.conf
+500      15268  8.1  0.3  64556 27364 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6312.conf
+500      15272  7.8  0.3  64556 26332 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6313.conf
+500      15276  7.0  0.3  60460 23852 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6314.conf
+500      15280  6.3  0.2  60460 22316 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6315.conf
+500      15284  6.0  0.2  60460 21232 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6316.conf
+500      15288  6.6  0.3  60460 22924 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6317.conf
+500      15292  6.4  0.2  56364 18524 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6318.conf
+500      15296  6.0  0.2  56364 18068 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6319.conf
+500      15300  6.4  0.2  56364 18596 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6320.conf
+500      15304  6.8  0.2  56364 19524 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6321.conf
+500      15308  5.0  0.1  52268 14544 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6322.conf
+500      15312  4.6  0.1  52268 14136 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6323.conf
+500      15316  4.2  0.1  48172 10652 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6324.conf
+500      15325  6.7  0.2  52268 16044 ?        Dsl  03:11   0:00 /usr/local/redis/bin/redis-server /usr/local/redis/data/redis-6325.conf
+
+
+
+ec2-54-190-37-159.us-west-2.compute.amazonaws.com

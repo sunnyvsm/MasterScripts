@@ -1,0 +1,79 @@
+TASK 1
+chef tutorial for tiot 338
+
+1> chef cookbooK used for it is vlg-data-ftp
+2> all cronjobs are in attributes files
+3> cerate an script tocheck the file number (already created) and push it at <ssh://git@git-internal.gio.videologygroup.com/gio/vlg-bin.git> -> push script to this directory and add a cronjob with following deatils
+------------------------------------------------------------------------
+default['vlg-cron']['jobs']['Excelate_puller'] = {
+  'time' => '0 * * * *',
+  'user' => "#{node['vlg-base']['app_user']}",
+  'command' => "#{node['vlg-base']['bin_dir']}<SCRIPT NAME>  <ARG1> <ARG2> >> #{node['vlg-base']['log_dir']}/fte-normalizer/<OUTPUTFILENAME>.`date +\\%Y-\\%m-\\%d`.log", 
+}
+------------------------------------------------------------------------
+
+TASK2
+MOFIED CRONJOB AS PER TASK2 WOLD BE
+CREATE AND VARIABLE ABY DIRECTORY 
+default['vlg-data-ftp']['aby_dir'] = "/home/ahailemichael/fte-normalizer-deploy"
+default['vlg-base']['aby_user'] = 'ahailemichael'
+
+
+
+default['vlg-cron']['jobs']['backup'] = {
+  'time' => '0 * * * *',
+  'user' => "#{node['vlg-base']['aby_user']}",
+  'command' => "#{node['vlg-data-ftp']['aby_dir']}/s3-backup.sh >> #{node['vlg-base']['log_dir']}/fte-normalizer/data-s3-backup.`date +\\%Y-\\%m-\\%d`.log",
+}
+default['vlg-cron']['jobs']['normalized'] = {
+  'time' => '0 * * * *',
+  'user' => "#{node['vlg-base']['aby_user']}",
+  'command' => "#{node['vlg-data-ftp']['aby_dir']}/s3-normalized.sh >> #{node['vlg-base']['log_dir']}/fte-normalizer/data-normalizer-s3-output.`date +\\%Y-\\%m-\\%d`.log", 
+}
+default['vlg-cron']['jobs']['xaxis_puller'] = {
+  'time' => '0 * * * *',
+  'user' => "#{node['vlg-base']['aby_user']}",
+  'command' => "#{node['vlg-data-ftp']['aby_dir']}/s3-puller.sh >> #{node['vlg-base']['log_dir']}/fte-normalizer/data-normalizer-puller-output.`date +\\%Y-\\%m-\\%d`.log", 
+}
+default['vlg-cron']['jobs']['normalizer'] = {
+  'time' => '0 * * * *',
+  'user' => "#{node['vlg-base']['aby_user']}",
+  'command' => "/usr/bin/java -cp #{node['vlg-data-ftp']['aby_dir']}/fte-normalizer-main-1.0-SNAPSHOT.jar com.videologygroup.main.AppFacade >> #{node['vlg-base']['log_dir']}/fte-normalizer/data-fte-normalizer-output.`date +\\%Y-\\%m-\\%d`.log", 
+}
+default['vlg-cron']['jobs']['Excelate_puller'] = {
+  'time' => '0 * * * *',
+  'user' => "#{node['vlg-base']['aby_user']}",
+  'command' => "#{node['vlg-base']['aby_dir']}/data-s3-file-puller.sh vg-s2s-us/FTP_Backup/Exelate /home/excelate/ftproot >> #{node['vlg-base']['log_dir']}/fte-normalizer/data-s3-puller-excelate-output.`date +\\%Y-\\%m-\\%d`.log", 
+  
+}  
+  ------------------------------------------------------------------------------------
+
+  task 3
+  
+  create an script to push the data from local folder to s3 folder mentioned, and to delete the log craete separete scripts 
+  ask for the frequency
+  
+  push those  scripts to ssh://git@git-internal.gio.videologygroup.com/gio/vlg-bin.git>
+  
+  accordingly craete an job as frequecy they mention.
+  
+  
+  
+  ---------------------------------------------------------------------------------------
+  
+  uploading the chef to git
+  upload it just like nagios git upload
+  now set approver to merge your chef changes
+  for that do:
+ https://git.gio.videologygroup.com/projects/GIO/repos/chef-repo/pull-requests?create
+ select the child repo
+ select branch
+ committee 
+ later select approver/reviewer
+  than create
+ 
+ 
+ later ask JP for provision of chef
+  
+  
+  

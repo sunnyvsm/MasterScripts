@@ -1,0 +1,11 @@
+SED AND REGULAR EXPRESSION
+
+***NOTE
+whenever you are trying to match number with multiple digit in sed use -E option to allcurly braces directly {}
+we use curly braces to define the range of digits
+
+if i want to match number from 1-5 numbers
+then
+
+sed -n 's/[0-9]\{1,5\}/p' filename # here we need to escape curly braces as -E option is not used
+sed -En 's/[0-9]{1,5}/p' filename

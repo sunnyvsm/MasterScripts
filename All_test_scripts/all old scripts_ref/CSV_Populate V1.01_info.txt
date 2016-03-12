@@ -1,0 +1,12 @@
+CSV_Populate V1.01
+Script is developed to populate the CSV file with
+1> Platform Information
+2> Environment Informaton
+3> Name INformation
+4> Application Information
+5> Peak CPU for past 7 days
+6> Disk Read for past 7 days
+7> Disk Write for past 7 days
+
+
+please redirect the output the file you wanted 

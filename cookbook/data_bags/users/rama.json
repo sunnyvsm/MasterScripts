@@ -1,0 +1,8 @@
+{
+	"id": "rama",
+	"uid": 1001,
+	"shell": "/bin/bash",
+	"comment": "user_rama", 
+	"username": "rama",
+        "key_content": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCwovn4r+kzsOgTtCJ3Pv7XmDCdMy+ywJhZaDem2Yy+xR/Not/D9c82A63S6tt/O8XPbe9IAeb8uezQxd5493En5t39a6UrnAoQCPehK+F7hsSVysBWLo5pceDrJFR0AC+9vsl288ueYRNMUKr8n4SJW4jtTSsF5aFpGfKcQsEU7N58asAHShav4d8wXNwVyaiXu2OB1K7uxQRmJyTg7QYERGoYnu1Zsqk5mbOuFyJ21W1zsa40sOGukJcuc2rjsjSh5QCfkhX8YJfWxeJgThJRX+ap+PBfkx6WF2l26cnjVCWe/EsDqBma2Ze42ciuFkNT5MEJrz368Ax1EC/BhLr root@precise64"
+}

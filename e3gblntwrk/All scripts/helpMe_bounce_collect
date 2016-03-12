@@ -1,0 +1,43 @@
+BOUNCE GATHERING
+1> SCRIPT LOCATION 
+/home/arpit/script/bounce_collect.sh
+
+2>Argument to pass to the script
+	N/A
+	
+3> Execution Time
+23:59 hrs  every day
+
+3> Nature of script/
+. Bounce collect.sh will scan the acct file located at location /var/log/pmta 
+. This script will scan an day old file will place its copy at loation /var/log/pmta/old_lof_files for future refrence.
+. This script will scan for bounce log refrenced by keyword "b" at very begining of every log lines.
+. Later this bounce log is separated under different isp depending upon there error code .
+. Below is the error code being refrenced for collecting bounce data.
+	aol.com 550, 521
+	gmail.com/googlemail.com 550 	
+	hotmail.com/live.com/live.co.uk/msn.com/outlook.com/rocketmail.com 550
+	yahoo.com/ymail.com/yahoo.co.uk 554
+	and other isp 554/554/521
+	* Please update this part if any new bounce code found.
+. This bounce data depending on isp is located at /var/log/pmta/bounce_data/isp_bouce_date(1dayago)	
+SAMPLE OUTPUT
+-----------------------------------------------------------------------------------------------------
+sh /home/arpit/script/bounce_collect.sh
+Total bounce data stored in file /var/log/pmta/bounce_data/aol.com_bounce_2015-11-18 is =>      42
+Total bounce data stored in file /var/log/pmta/bounce_data/gmail.com_bounce_2015-11-18 is =>    44
+Total bounce data stored in file /var/log/pmta/bounce_data/googlemail.com_bounce_2015-11-18 is =>       1
+Total bounce data stored in file /var/log/pmta/bounce_data/hotmail.com_bounce_2015-11-18 is =>  2
+Total bounce data stored in file /var/log/pmta/bounce_data/hotmail.co.uk_bounce_2015-11-18 is =>        2
+Total bounce data stored in file /var/log/pmta/bounce_data/live.com_bounce_2015-11-18 is =>     0
+Total bounce data stored in file /var/log/pmta/bounce_data/live.co.uk_bounce_2015-11-18 is =>   0
+Total bounce data stored in file /var/log/pmta/bounce_data/msn.com_bounce_2015-11-18 is =>      0
+Total bounce data stored in file /var/log/pmta/bounce_data/outlook.com_bounce_2015-11-18 is =>  0
+Total bounce data stored in file /var/log/pmta/bounce_data/rocketmail.com_bounce_2015-11-18 is =>       0
+Total bounce data stored in file /var/log/pmta/bounce_data/yahoo.com_bounce_2015-11-18 is =>    44
+Total bounce data stored in file /var/log/pmta/bounce_data/yahoo.co.uk_bounce_2015-11-18 is =>  2
+Total bounce data stored in file /var/log/pmta/bounce_data/ymail.com_bounce_2015-11-18 is =>    1
+
+
+---------------------------------------------------------------------------------------------------------
+*****PLEASE LET ME KNOW IS NAY ISSUE IN SCRIPT OR MANUAL

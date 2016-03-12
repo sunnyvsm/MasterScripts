@@ -1,0 +1,33 @@
+Take the following action if you see latency in the US-West or US-East Data Centers.
+ 
+Let us take the e.g. for US-West
+When there is latency you will get an alert - The latency on the ELB in US-West was at 1s or higher for the last 10 minutes
+
+
+Use this dashboard - https://app.datadoghq.com/dash/dash/19993?live=true&from_ts=1408111456381&to_ts=1408115056381&tile_size=m to monitor AdServer performance in West if there is any latency related issue. See graph below.
+ 
+The ELB Latency will probably over 1s (1000 ms) and co-relate this with the Contextual Targeting Timeout graph below.
+If you see a spike in the latency and a spike in the timeouts then call the person-on-call and he will walk you through the action to be taken the first time. Record it for your team members. You will own it in future.
+ 
+I have described the actions below this chart.
+
+1.      Switch off contextual targeting
+a.      Browse in S3 to the folder vg-configs/us-oregon/adserverconfig/AdserverDynamicConfig.config
+b.      Download it
+c.      Change EnableContextualTargeting="true" to EnableContextualTargeting="false"
+d.      Verify the XML using a tool like http://www.w3schools.com/xml/xml_validator.asp
+e.      Generate the new MD5 File.
+f.      Upload the AdserverDynamicConfig.config followed by the AdserverDynamicConfig.md5
+g.      To keep it simple we may just swap the files to avoid steps c to e
+2.      Verify in a few minutes (can take up to 15) that the file is on the aderver in location C:\inetpub\wwwroot\TidalTv\Adserver2.0\ConfigurationFiles
+3.      Verify that adserver logs are coming in C:\tidaltv\prod\EventLogs3.0\EventLogs\tsvAdserverLog
+4.      Verify that there aren’t any errors related to the change C:\tidaltv\prod\EventLogs2.0\EventLogs\ERR
+5.      Monitor that the latency goes down … the timeouts should go to close to ZERO since it should no longer be called.
+a.      Note Datadog is atleast 5 minutes behind
+b.      Use CloudWatch for near real time data
+ 
+This will be changed to false.
+
+Note –
+1.      For US-East the Dashboard is https://app.datadoghq.com/dash/dash/14322?live=true&from_ts=1405526351653&to_ts=1408118351653&tile_size=m
+2.      Bucket is vg-configs/us-east-1/adserverconfig

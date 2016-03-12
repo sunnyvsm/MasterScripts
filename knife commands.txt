@@ -1,0 +1,8 @@
+knife ec2 server create -I ami-f0091d91 --bootstrap-version 11.16.4 --security-group-ids sg-a62807c2 --subnet subnet-b162ddc6 --associate-public-ip --ssh-key test-machine -f t2.micro --ssh-user ec2-user --identity-file ~/.ssh/keypairs/test-machine.pem -N testmachine_1_chef  --run-list recipe[e3gblntwrk] --region=us-west-2 --environment Production --tags Platform=Systems,Owner=Systems,Name=usvagibasbx01,Environment=Production,Application=Sending_server
+
+
+knife ec2 server create -I ami-f0091d91 --bootstrap-version 11.16.4 --security-group-ids sg-a62807c2 --subnet subnet-b162ddc6 --associate-public-ip --ssh-key test-machine -f t2.micro --ssh-user ec2-user --identity-file ~/.ssh/keypairs/test-machine.pem -N testmachine_1_chef --region=us-west-2 --environment production  --tags Platform=Data,Owner=Systems,Name=testmachine_1_chef,Environment=Production,Application=CDH --ephemeral '/dev/sdb,/dev/sdc,/dev/sdd,/dev/sde' --ebs-size 80
+
+
+knife[:aws_access_key_id] = "Your AWS Access Key ID"
+knife[:aws_secret_access_key] = "Your AWS Secret Access Key"

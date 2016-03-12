@@ -1,0 +1,35 @@
+#!/bin/bash
+cat md5_files | while read line ; do
+echo $line
+{
+    /usr/bin/expect << EOF
+    spawn scp lucidmedia@192.10.35.12:sonatype-work/nexus/storage$line /tmp/temp_2
+    expect "password:"
+    send "webversafs\r";
+    expect "*#*"
+EOF
+}
+done
+
+
+${NEXUS_WORK} = /home/vlg/Nexus/sonatype-work/nexus
+nexus_application_directory = /home/vlg/nexus
+
+
+
+
+
+link_fol=`find . -type l -exec ls -l {} \; | awk '{print $NF}'  |  sed 's/\///'`
+lat_nexus_fol=`ls -ldr nexus* | awk '{print $NF}' | grep -v "/" | sort | tail -1`
+
+if [ ${lat_nexus_fol} != ${link_fol} ] ; then 
+unlink nexus
+ln -s ${lat_nexus_fol} nexus
+; fi
+
+a=`find /home/vlg/ -type l -exec ls -l {} \; | awk '{print $NF}'`
+b=`ls -ldr /usr/local/Nexus/nexus* | awk '{print $NF}'| sort | tail -1`
+if [ ! -z ${a} ] && [ ! -z ${b} ] && [ ${a} != ${b} ] ; then 
+service nexus stop
+unlink nexus
+fi

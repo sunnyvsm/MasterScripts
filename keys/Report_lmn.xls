@@ -1,0 +1,43 @@
+REGION	INSTANCE-ID	INSTANCE-TYPE	NAME	APPLICATION	ENVIRONMENT	PLATFORM	TOTAL-COST($)	PEAK-CPU(%)	AVG-CPU(%)	TOTAL-MEM(GB)	PEAK-MEM-USED(%)	AVG-MEM-USED(%)	AVG-MEM-AVAIL(MB)	AVG-MEM-USED(MB)
+us-west-2	i-28e13c23	c3.xlarge	usorlzrhprd04	Request Handler		Eliza		10.3683	4.8323	7.5				
+us-east-1	i-fcc1bf85	m2.2xlarge	usvalurp02	Result Processor	Production	Lucy		22.6	0.308989	34.2	71.9262	71.8369	9859.21	25148.3
+us-east-1	i-c04f0690	c3.xlarge	usvalzrhprd02	Request Handler		Eliza		3.24333	0.608841	7.5				
+us-east-1	i-ad75a983	c3.xlarge	usvalzrh08	Request Handler	Production	Eliza		20.9417	14.2665	7.5				
+us-east-1	i-5f316ca5	m2.2xlarge	usvalurp03	Result Processor		Lucy		0.358333	0.0456034	34.2	1.67642	1.67108	33602.7	571.072
+eu-west-1	i-e3a92bac	c1.xlarge	euirlzrh04	Request Handler	Production	Eliza		4.985	2.06667	7.0				
+ap-southeast-1	i-cb58e69d	c1.medium	apsglzpx01	Proxy	Production	Eliza	118.08	27.1733	10.9129	1.7				
+ap-southeast-1	i-aacd2483	c1.medium	apsglzpx02	Proxy	Production	Eliza	118.08	26.025	10.8637	1.7				
+us-west-2	i-89097dbf	m1.large	usorlzdb01	CM	Production	Eliza		1.39167	0.166887	7.5	9.13074	9.10565	6669.88	668.178
+us-west-2	i-29e13c22	c3.xlarge	usorlzrhprd02	Request Handler		Eliza		11.2967	5.34761	7.5				
+us-west-2	i-7ae03d71	c3.xlarge	usorlzrhprd01	Request Handler		Eliza		12.5217	5.91242	7.5				
+ap-southeast-1	i-ea3441bc	c1.xlarge	apsglzrh01	Request Handler	Production	Eliza		0.433333	0.195378	7.0	4.22543	4.19289	6547.81	286.558
+eu-west-1	i-2b2bed64	c1.xlarge	euirlzrh01	Request Handler	Production	Eliza		4.97333	2.06577	7.0				
+us-east-1	i-16067973	m2.xlarge	usvalurp06	Result Processor	Production	Lucy	176.4	49.84	0.967764	17.1				
+us-east-1	i-1ffdda4e	c3.xlarge	usvalzrh14	Request Handler	Production	Eliza		13.0017	7.41061	7.5				
+us-east-1	i-3078db56	m2.2xlarge	usvaopsb03		Sandbox	Optimization		1.015	0.0570545	34.2	16.5948	14.2143	29316.2	4857.56
+us-west-2	i-38709733	c3.large	usorlzpx01	Proxy	Production	Eliza	75.6	32.005	14.6654	3.75				
+us-west-2	i-3b41dc30	c3.large	usorlzpx06	Proxy		Eliza	75.6	31.89	15.097	3.75				
+us-west-2	i-56dd405d	c3.xlarge	usorlzrhprd10	Request Handler		Eliza		10.5767	5.02596	7.5				
+us-west-2	i-612dbf6a	c3.xlarge	usorlzrhprd08	Request Handler		Eliza		10.1383	4.8921	7.5				
+eu-west-1	i-d63dbb9a	c1.xlarge	euirlzrh03	Request Handler	Production	Eliza		5.00333	2.07279	7.0				
+us-west-2	i-da2cbed1	c3.xlarge	usorlzrhprd07	Request Handler		Eliza		10.505	5.01536	7.5				
+us-east-1	i-f876aad6	c3.xlarge	usvalzrh09	Request Handler	Production	Eliza		21.395	14.0938	7.5				
+us-east-1	i-ddfdd5f6	c3.xlarge	usvalzrhprd15	Request Handler		Eliza		13.75	8.16574	7.5				
+us-east-1	i-d0ffd7fb	c3.xlarge	usvalzrhprd18	Request Handler		Eliza		13.3333	7.86809	7.5				
+us-east-1	i-c588abee	c3.xlarge	usvalzrhprd12	Request Handler		Eliza		13.98	8.0973	7.5				
+us-east-1	i-8da02c5d	c3.xlarge	contextual-instance			Eliza		9.945	1.36262	7.5				
+us-east-1	i-7f88ab54	c3.xlarge	usvalzrhprd05	Request Handler		Eliza		14.05	8.09183	7.5				
+us-east-1	i-7c88ab57	c3.xlarge	usvalzrhprd13	Request Handler		Eliza		14.0217	8.14351	7.5				
+us-east-1	i-6c37e609	m1.large	usvalurb01	Report Builder	Production	Lucy		2.15	0.858706	7.5	14.699	14.6611	6262.21	1075.84
+us-east-1	i-2c1c3557	m2.2xlarge	usvalurp01	Result Processor	Production	Lucy		50.4717	10.3384	34.2	40.5896	36.8391	21584.4	12589.3
+us-east-1	i-0cee2622	c3.xlarge	usvalzrh11	Request Handler	Production	Eliza		21.535	14.5652	7.5				
+us-west-2	i-db2cbed0	c3.xlarge	usorlzrhprd09	Request Handler		Eliza		10.475	4.99077	7.5				
+us-west-2	i-12e73a19	c3.xlarge	usorlzrhprd03	Request Handler		Eliza		10.56	4.88302	7.5				
+eu-west-1	i-db0dbd97	c1.medium	euirlzpx02	Proxy	Production	Eliza	106.56	13.4583	6.29004	1.7				
+eu-west-1	i-ee2678a2	c1.medium	euirlzpx01	Proxy	Production	Eliza	106.56	13.495	5.86797	1.7				
+us-east-1	i-90ffd7bb	c3.xlarge	usvalzrhprd17	Request Handler		Eliza		13.835	8.1748	7.5				
+us-east-1	i-91ffd7ba	c3.xlarge	usvalzrhprd16	Request Handler		Eliza		13.5283	8.06627	7.5				
+us-east-1	i-a3c96cd9	c1.xlarge	awserp11	Result Processor	Production	Lucy		16.2633	2.21363	7.0				
+us-east-1	i-aa75a984	c3.xlarge	usvalzrh07	Request Handler	Production	Eliza		21.9317	14.7663	7.5				
+us-east-1	i-ac75a982	c3.xlarge	usvalzrh06	Request Handler	Production	Eliza		22.0667	14.7804	7.5				
+us-east-1	i-c34f0693	c3.xlarge	usvalzrhprd04	Request Handler		Eliza		16.6933	8.00039	7.5				

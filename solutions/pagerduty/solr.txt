@@ -1,0 +1,48 @@
+   Description: Service 'solr' on host '<HOSTNAME>' is CRITICAL.
+
+1>	Simply restarting tomcat would help
+
+
+Steps
+1.	Check the affected hosts over Nagios
+2.	see the error
+3.	Mostly the tomcat would not be running over the hosts,
+4.	So go to the hosts and restart the service
+5.	After a while check the service over Nagios had it came back or not
+6.	
+
+execute below command to check the hosts status . if output is ok then solr is srunning succesfulyy
+ /usr/local/nagios/libexec/check_nrpe -H usorlzslprd07.videologygroup.com -c solr_status_check -t 80
+
+
+
+steps to fix if solr service is down over multiple servers
+
+What is Solr :  An opesource enterprise search project that has a very rich feature set that includes : faceted search,dynamic clustering, db integration, document handling, full text search,hit highlighting.  Solr is lucene with lipstick. 
+
+
+Solr use case : So you want to search through data , need faster results, need features like autocomplete, hit highlighting , full text search but don’t want to tax your database then Solr is the way to go. 
+
+How does it work :
+ You connect it to the datasource (db,docs ..). It sources all the data in memory , shards it based on the key specified, parses it, tokenizes it and makes it ready for the querying. 
+
+
+How do I troubleshoot it :
+ Treat It like any other java app running on a servlet engine. Check out the Solr admin UI, it gives you logs , config details and topology on the UI. The logs are always pretty self explanatory. 
+
+Some common issues and their fixes :
+•		Unable to find the search data : Permission issue, make sure the owner of the app ( who every you running your app as) has access to the index. 
+•		No leader found : Usually caused by n/w hiccups or other communication issue. In order to fix it,  stop the solr app ( tomcat) , remove the write.lock file ( I usually do this “find . -name write.lock -exec rm -rf {} \;” ) , start the app and wait for 10 min. 
+•	        Unable to elect  a leader : Make sure you have 2n+1 nodes of zookeeper running were (n >= ]0 )
+•	    no servers hosting shard :		
+	- Stop all Solr instances 
+	- Stop all Zookeeper instances 
+	- Start all Zookeeper instances 
+	- Start Solr instances one at a time. 
+
+
+Important files :
+
+•	solr.xml —>  Defines solr as an application (top level)
+•	schema.xml —>  Describes the structure of the documents indexed.
+•	solrconfig.xml —>  configure search and request handlers. Is usually never 

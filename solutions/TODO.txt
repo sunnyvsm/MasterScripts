@@ -1,0 +1,14 @@
+1> updated the notes for the below.
+A couple of notes for the next time.
+•	Drop Couchbase instances where the Average CPU is greater than 8%.
+•	Drop All instances where Peak CPU > 40% & Average CPU > 5 %
+
+
+2> TIOT-904
+3> TIOT-875 done 
+3> updated the script not to check the user geyser_stag. done
+4> tiot 922 done by yogesh
+
+
+
+

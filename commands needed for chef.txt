@@ -1,0 +1,1 @@
+curl -L -s http://s3.amazonaws.com/videologypublic/repo/jdk-8u11-linux-x64.tar.gz | sha256sum 

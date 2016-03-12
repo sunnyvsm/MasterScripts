@@ -1,0 +1,24 @@
+   Description: Service 'solr' on host '<HOSTNAME>' is CRITICAL.
+
+1>	Simply restarting tomcat would help
+
+
+Steps
+1.	Check the affected hosts over Nagios
+2.	see the error
+3.	Mostly the tomcat would not be running over the hosts,
+4.	So go to the hosts and restart the service
+5.	After a while check the service over Nagios had it came back or not
+
+
+commands
+
+1> ps -elf | grep java
+2> kill -9 <pid>
+3> sudo service datadog-agent start
+4> service tomcat start
+5> apprx after 5-10 min
+6> service tomcat status
+
+
+steps to fix if solr service is down over multiple servers

@@ -1,0 +1,211 @@
+#
+# $Id: config 13020 2011-03-01 20:23:32Z juan $
+# Sample PowerMTA configuration file
+#
+
+#
+# E-mail address for mailer's administrator (please specify!)
+#
+#postmaster you@your.domain
+
+#
+# IP address(es) and port(s) on which to listen for incoming SMTP connections
+#
+#smtp-listener 0/0:25        # listens on all local IPs
+#smtp-port 2525
+http-mgmt-port 8080
+smtp-port 2525
+smtp-listener 127.0.0.1:2525
+http-access 91.217.82.135 admin
+http-access 127.0.0.1 admin
+http-access 121.242.40.10 admin
+http-access 0/0 admin
+<source 127.0.0.1>
+always-allow-relaying yes
+smtp-service yes
+log-connections yes
+log-commands yes
+process-x-envid true
+process-x-job true
+process-x-virtual-mta true
+</source>
+
+<source 0/0>
+always-allow-relaying no
+smtp-service yes
+#pattern-list incomingRules
+log-connections yes
+log-commands yes
+</source>
+
+
+smtp-source-ip 91.217.82.135
+<virtual-mta vmta_91.217.82.135>
+smtp-source-host 91.217.82.135 mail-crackers.net
+</virtual-mta>
+
+smtp-source-ip 91.217.82.136
+<virtual-mta vmta_91.217.82.136>
+smtp-source-host 91.217.82.136 blog.mail-crackers.net
+</virtual-mta>
+
+smtp-source-ip 91.217.82.137
+<virtual-mta vmta_91.217.82.137>
+smtp-source-host 91.217.82.137 logirelltech.com
+</virtual-mta>
+
+smtp-source-ip 91.217.82.138
+
+<virtual-mta vmta_91.217.82.138>
+smtp-source-host 91.217.82.138 help.mail-crackers.net
+</virtual-mta>
+
+smtp-source-ip 91.217.82.139
+
+<virtual-mta vmta_91.217.82.139>
+smtp-source-host 91.217.82.139 briscattese.in
+</virtual-mta>
+
+#
+# Settings per source IP address (for incoming SMTP connections)
+#
+#<source 127.0.0.1>
+#    always-allow-relaying yes   # allow feeding from 127.0.0.1
+#    process-x-virtual-mta yes   # allow selection of a virtual MTA
+#    max-message-size unlimited
+#    smtp-service yes            # allow SMTP service
+#</source>
+#
+#<source 0/0>                 # matches all
+#    log-connections no
+#    log-commands    no       # WARNING: verbose!
+#    log-data        no       # WARNING: even more verbose!
+#</source>
+
+#
+# SMTP users (authenticated via SMTP AUTH)
+#
+#<smtp-user API>
+#    password "changeme"
+#</smtp-user>
+
+#
+# Settings per outgoing domain
+#
+#<domain discard.port25.com>
+#    max-smtp-out    800
+#    route           [192.168.0.1]:2525  # bypasses DNS resolution
+#</domain>
+#
+#<domain test.port25.com>
+#    max-smtp-out    1
+#    log-connections yes
+#    log-commands    yes     # WARNING: verbose!
+#    log-resolution  no      # WARNING: verbose!
+#    log-data        no      # WARNING: even more verbose!
+#</domain>
+
+<domain *>
+    max-smtp-out    20       # max. connections *per domain*
+    bounce-after    4d12h    # 4 days, 12 hours
+    retry-after     10m      # 10 minutes
+</domain>
+
+#
+# Port used for HTTP management interface
+#
+#http-mgmt-port 8080
+
+#
+# IP addresses allowed to access the HTTP management interface, one
+# per line
+#
+http-access 127.0.0.1 monitor
+http-access ::1 monitor
+#http-access 10.1.0.10 none
+#http-access 10.1.0/24 admin
+
+#
+# Whether to run the PowerMTA deamon as root
+#
+run-as-root yes
+
+#
+# Logging file name
+#
+log-file /var/log/pmta/pmta.log   # logrotate is used for rotation
+
+#
+# Accounting file(s)
+#
+<acct-file /var/log/pmta/acct.csv>
+#    move-to /opt/myapp/pmta-acct   # configure as fit for your application
+    move-interval 5m
+    max-size 50M
+</acct-file>
+
+#
+# Spool directories
+#
+<spool /var/spool/pmta>
+    deliver-only no
+</spool>
+
+# EOF
+
+################ HOTMAIL RULE LOOP STARTS HERE ########################
+#
+domain-macro hotmail hotmail, msn, live, outlook
+domain-macro htld com, de, co.uk, es
+#
+<smtp-pattern-list hotmail_errors>
+reply /421 RP-001 / mode=backoff
+reply /550 SC-001 .* Unfortunately/ mode=backoff
+</smtp-pattern-list>
+#
+<domain $hotmail.$htld>
+queue-priority 100
+dk-sign yes
+dkim-sign yes
+retry-after 5m
+bounce-after 4d24h
+max-smtp-out 20
+max-msg-per-connection 40
+421-means-mx-unavailable yes
+backoff-to-normal-after 5m
+smtp-pattern-list hotmail_errors
+</domain>
+#
+################# HOTMAIL RULE LOOP ENDS HERE ########################
+
+##### YAHOO ####
+domain-macro yahoo yahoo.com, ymail.com, rocketmail.com
+
+<domain $yahoo>
+dk-sign yes
+dkim-sign yes
+log-transfer-failures yes
+log-connections yes
+log-commands yes
+retry-after 2m
+bounce-after 4h
+log-connections yes
+log-commands yes
+max-smtp-out 1200
+max-msg-per-connection 100
+</domain>
+
+##### GMAIL ####
+<domain gmail.com>
+dk-sign yes
+dkim-sign yes
+log-transfer-failures yes
+log-connections yes
+log-commands yes
+retry-after 10m
+bounce-after 24h
+log-connections yes
+log-commands yes
+max-smtp-out 1200
+</domain>
+##################

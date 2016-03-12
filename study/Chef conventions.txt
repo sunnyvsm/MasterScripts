@@ -1,0 +1,7 @@
+1> ::class_name ==> this cnvention is used to useed the class class_name (already created)
+    Using the : prefix tells the chef-client to look for the specified class that follows.
+2> include? ==> The include? method can be used to ensure that a specific parameter is included before an action is taken. 
+   for eg:
+		if ["debian", "ubuntu"].include?(node["platform"])
+  		# do debian/ubuntu things
+		end

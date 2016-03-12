@@ -1,0 +1,113 @@
+#!/bin/bash
+
+hostname=`hostname`
+tomcat="/store/logs/tomcat"
+clicksense="/store/logs/clicksense"
+actions="/archive/logs"
+emailTo="ops@lucidmedia.com"
+err=0
+
+#tomcat logs
+for (( i=0;i<4;i++ ))
+do
+        date=`date --date="$i day ago" '+%Y-%m-%d'`
+        if [[ i -eq 0 ]];then
+                list="^.*.${date}.*$"
+        else
+                list="${list}\|^.*\.${date}.*$"
+        fi
+done
+
+for log in `ls | grep -v "${list}"`
+do
+               
+                echo $log
+            
+ done
+
+
+if [ -w ${tomcat} ];then
+        pushd ${tomcat} > /dev/null
+        for log in `ls | grep -v "${list}"`
+        do
+                echo -n "deleting $log: "
+                nice rm -f $log
+                if [ $? -eq 0 ];then
+                        echo -en "ok\n"
+                else
+                        echo -en "error\n"
+                        err=1
+                fi
+        done
+        popd > /dev/null
+else
+        echo -e "error deleting Tomcat logs. check file permissions and/or disk mount\n"
+        err=1
+fi
+
+#clicksense logs excluding actions
+for (( i=0;i<8;i++ ))
+do
+        date=`date --date="$i day ago" '+%y-%m-%d'`
+        if [[ i -eq 0 ]];then
+                        list="^.*\.${date}.*$"
+                else
+                        list="${list}\|^.*\.${date}.*$"
+                fi
+done
+
+if [ -w ${clicksense} ];then
+        pushd ${clicksense} > /dev/null
+        #exclude today's inventory logs
+        #date=`date --date='today' '+%y-%m-%d'`
+        #for log in `ls | grep -v "${list}\|^.*\.${date}.*$"`
+        for log in `ls | grep -v "${list}"`
+        do
+                echo -n "deleting $log: "
+                nice rm -f $log
+                if [ $? -eq 0 ];then
+                        echo -en "ok\n"
+                else
+                        echo -en "error\n"
+                        err=1
+                fi
+        done
+        popd > /dev/null
+else
+        echo -e "error deleting ClickSense logs. check file permissions and/or disk mount\n"
+        err=1
+fi
+
+#actions logs
+for (( i=0;i<4;i++ ))
+do
+        date=`date --date="$i day ago" '+%y-%m-%d'`
+        if [[ i -eq 0 ]];then
+                list="^.*\.${date}.*$"
+        else
+                list="${list}\|^.*\.${date}.*$"
+        fi
+done
+
+if [ -w ${actions} ];then
+        pushd ${actions} > /dev/null
+        for log in `ls | grep -v "${list}"`
+        do
+                echo -n "deleting $log: "
+                nice rm -f $log
+                if [ $? -eq 0 ];then
+                        echo -en "ok\n"
+                else
+                        echo -en "error\n"
+                        err=1
+                fi
+        done
+        popd > /dev/null
+else
+        echo -e "error deleting Actions logs. check file permissions and/or disk mount\n"
+        err=1
+fi
+
+if [ ${err} -eq 1 ];then
+        mail -s "${hostname}: Logs Janitor Error" ${emailTo} < /home/lucidmedia/logs-janitor.txt
+fi

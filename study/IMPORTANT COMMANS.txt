@@ -1,0 +1,21 @@
+[[[[[ S3 COMMAND to move files within the buckets ]]]]
+
+s3cmd cp --r s3://bucket1/directory1 s3://bucket2/directory1
+s3cmd mv --recursive s3://bucket1/directory1 s3://bucket2/directory1
+
+
+====================================================================================
+s3cmd command to list the files in bucket
+
+s3cmd ls s3://bucketname
+
+
+s3cmd command to get the size of  files in bucket
+
+s3cmd du s3://bucketname
+s3cmd du -H s3://ttv-logs/tsv/DPInfoLogs/y=2015/m=01/d=31/h=00
+
+-H is for human readable form
+=====================================================================================
+
+s3cmd mv s3://vg-s2s-us/ftp/eyeota/42_01122015_1421065145.gz s3://vg-s2s-us/Test/ftp_hold

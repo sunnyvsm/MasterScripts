@@ -1,0 +1,313 @@
+REGION	INSTANCE-ID	INSTANCE-TYPE	NAME	APPLICATION	ENVIRONMENT	PLATFORM	TOTAL-COST($)	PEAK-CPU(%)	AVG-CPU(%)	TOTAL-MEM(GB)	PEAK-MEM-USED(%)	AVG-MEM-USED(%)	AVG-MEM-AVAIL(MB)	AVG-MEM-USED(MB)
+us-east-1	i-d2ee6dfe	c3.xlarge	usvamrwwe2e02	MicroStrategy	E2E	BI	270.72	2.89667	0.399092	7.5	17.1267	16.2579	6431.05	1248.55
+us-east-1	i-d425b185	t1.micro	CloudFormer		Sandbox	Systems	14.4	37.7767	0.69042	0.613				
+us-east-1	i-d4d770fe	m3.large	Dev Rundeck Server	ETL	Development	Data	100.8	74.7633	5.02571	7.5				
+us-east-1	i-e029f810	m3.large	usvaolmpprd01	OptLite	Production	Optimization	100.8	26.2167	1.26365	7.5	69.2901	59.0522	3057.38	4409.15
+us-east-1	i-e04dd484	m1.xlarge	VSTE_2010_Controller	VSTE	QA	Lucy	430.56	31.5267	10.9888	15				
+us-east-1	i-e061e21e	r3.8xlarge	usvalzcbprd03	Couchbase	Production	Eliza	2016	23.21	4.4769	244	69.6357	69.1312	76086.3	170397
+us-east-1	i-e0fe2337	r3.2xlarge	usvaoplpprd02	Opt	Production	Optimization	504	100	7.63891	61	24.0501	13.544	53223.9	8337.96
+us-east-1	i-e1fc3137	m3.xlarge	Prod-MSTR-WEB01	Microstrategy		BI	383.04	14.2517	0.356411	15				
+us-east-1	i-e30bb133	m3.2xlarge	usvaopdgprd02	Opt	Production	Optimization	403.2	15.4217	0.696751	30	43.7379	40.9269	17781.1	12319
+ap-southeast-1	i-297532e4	r3.2xlarge	apsglzcbprd02	Couchbase	Production	Eliza	604.8	43.6167	8.28947	61	32.5716	31.8239	41970.5	19591.4
+us-east-1	i-0d08c6e1	m3.large	usvaoldaprd01	OptLite	Production	Optimization	100.8	22.8067	1.14112	7.5	66.9432	65.5715	2570.61	4895.91
+ap-southeast-1	i-15fceadf	r3.large	apsglzcbprd04	Couchbase	Production	Eliza	151.2	9.93	8.05263	15.25	7.81869	7.73499	13883.2	1163.89
+ap-southeast-1	i-15bcd1d9	c3.large	apsgvdsuprd	SSU	Production	Eliza	171.36	37.625	14.4527	3.75				
+ap-northeast-1	i-f6ec5c03	c3.xlarge	apnevdlgprd	Logger service	Production	Lucy	332.64	33.195	2.83609	7.5				
+ap-northeast-1	i-e6f35be1	m1.small				Systems	43.92	6.85333	0.0395727	1.7				
+ap-northeast-1	i-e2ec5c17	c3.xlarge	apnevdlgprd	Logger service	Production	Lucy	332.64	34.915	2.94835	7.5				
+us-east-1	i-0c6f3edb	m3.large	usvaolmosbx01	OptLite	Sandbox	Optimization	100.8	23.9167	0.760731	7.5	41.1592	39.7058	4501.88	2964.65
+us-east-1	i-0638b1f7	m3.large	usvalzjbsbx02	Jobs	Sandbox	Eliza	100.8	46.5033	0.728131	7.5	33.2668	31.1255	5142.53	2324
+us-east-1	i-04740024	m1.medium	PROD-USE-AD-01			Systems	107.28	9.72833	0.889694	3.75				
+eu-west-1	i-f9e12d53	c4.large	euirlzpdprd01	Proxy	Production	Eliza	95.04	14.875	4.06067	3.75	31.1911	27.8479	2718.9	1049.39
+eu-west-1	i-dd5e0939	c3.large	euirlupxprd04	Proxy	Production	Lucy	86.4	23.2283	8.12717	3.75	87.0956	84.9659	566.53	3201.76
+eu-west-1	i-d2420836	c3.xlarge	euirlzkfprd01	Kafka	Production	Eliza	172.08	12.9817	1.35906	7.5	24.416	22.9962	5749.32	1716.96
+eu-west-1	i-b8c5d0f9	c3.xlarge	euirlzdiprd01	Data Ingest	Production	Eliza	172.08	6.91667	0.734284	7.5	77.8068	76.9369	1692.33	5645.49
+eu-west-1	i-b7d342f7	r3.8xlarge	euirvlcbprd09	Couchbase		Eliza	2246.4	8.685	6.0026	244	84.7207	84.6691	37676.1	208077
+us-east-1	i-e4195b32	m3.medium	usvadtftprd01	FTP	Production	Data	50.4	39.4483	2.45152	3.75	65.5535	62.8022	1401.72	2366.56
+us-east-1	i-f2135725	c3.large	usvalupxprd12	Proxy	Production	Lucy	75.6	32.4167	13.9078	3.75	88.857	84.8438	571.132	3197.16
+us-east-1	i-f4336223	m3.large	usvaolmoprd01	OptLite	Production	Optimization	100.8	29.4467	1.27455	7.5	41.5396	40.0309	4477.61	2988.92
+us-east-1	i-f688681b	c3.2xlarge	usvalublinf01	Jenkins	Internal	Lucy	302.4	7.185	0.91475	15				
+us-east-1	i-daaec8a6	c3.2xlarge	gio-build-jenkins-build02	Jenkins		Lucy	302.4	2.97333	2.58884	15	29.3296	29.0867	10553.4	4328.72
+us-east-1	i-d6aec8aa	c3.2xlarge	gio-build-jenkins-master	Jenkins		Lucy	302.4	12.23	2.96794	15				
+us-east-1	i-fe7cb3ad	m3.medium	DSP-QA-MEMCACHED	DSP	QA	Maya	50.4	4.73833	0.250508	3.75	3.05351	3.00377	3640.32	112.733
+us-west-2	i-0f3da6f8	c4.large	usorlzpeprd02	Proxy	Production	Eliza	83.52	24.59	7.21756	3.75	36.7331	28.7835	2683.65	1084.65
+us-west-2	i-1406401f	c3.xlarge	usorlzdiprd02	Data Ingest	Production	Eliza	151.2	84.9383	4.90841	7.5				
+us-west-2	i-1e08b613	c3.large	usorlupxprd03	Proxy	Production	Lucy	75.6	14.7367	3.4432	3.75	88.237	86.0366	526.183	3242.11
+us-west-2	i-21dbc42b	c3.xlarge	usorlzdaprd36	Data API	Production	Eliza	151.2	16.4783	6.19698	7.5				
+us-west-2	i-27dbc42d	c3.xlarge	usorlzdaprd34	Data API	Production	Eliza	151.2	15.3967	5.90977	7.5				
+us-west-2	i-297db7de	c3.xlarge	usorlzsmprd06	Storm	production	Eliza	151.2	86.6467	23.0237	7.5	42.2536	36.6066	4733.13	2733.15
+us-west-2	i-2dcd4524	c3.xlarge	usorlzcmprd01	CM	Production	Eliza	151.2	13.965	1.38331	7.5	81.836	81.0555	1390.11	5947.71
+us-west-2	i-32602939	r3.8xlarge	usorvlcbprd04	Couchbase	Production	Eliza	2016	6.565	3.58182	244	78.8145	78.3949	53095.4	192658
+us-west-2	i-4f93fd44	c3.2xlarge	usorlzmqprd02	ActiveMQ	Production	Eliza	302.4	0.533333	0.290228	15	91.7087	91.6851	1237.43	13644.7
+us-west-2	i-53b7d3a5	c3.large	usorvdsuprd	SSU	Production	Eliza	135.36	20.6833	6.03903	3.75				
+us-west-2	i-55b7d3a3	c3.large	usorvdsuprd	SSU	Production	Eliza	135.36	21.0267	5.77991	3.75				
+us-west-2	i-56ce50a1	c3.large	usorlupxprd14	Proxy	Production	Lucy	75.6	11.3517	1.59822	3.75	32.5403	29.0905	2672.08	1096.22
+us-west-2	i-5d13c657	c3.xlarge	usorlzdaprd08	Data API	Production	Eliza	151.2	31.1217	14.7742	7.5	84.832	83.4767	1212.45	6125.37
+us-west-2	i-676f266c	cr1.8xlarge	usorvlcbprd01	Couchbase	Production	Eliza	2520	7.92667	3.97177	244	78.7012	77.7743	54620.4	191133
+us-west-2	i-7370cb7e	c3.large	usorlupxprd06	Proxy	Production	Lucy	75.6	13.1767	2.02594	3.75	88.1335	85.6399	541.13	3227.16
+us-west-2	i-76604f7b	c3.xlarge	usorlzdaprd07	Data API	Production	Eliza	151.2	31.5683	14.8256	7.5				
+us-west-2	i-7a54da73	c3.large	PROD-USW-01	40Cloud	Production	Systems	75.6	34.18	5.07847	3.75				
+us-west-2	i-7b56d78c	r3.8xlarge	usorvlcbprd14	Couchbase	Production	Eliza	2016	7.24	4.19817	244				
+us-west-2	i-94402298	r3.large	usorlzkzprd06	Kafka	Production	Eliza	126	74.555	17.11	15.25	15.3795	14.7228	13070.5	2256.57
+us-west-2	i-953ca762	c4.large	usorlzpeprd01	Proxy	Production	Eliza	83.52	22.2883	6.92963	3.75	36.399	28.71	2686.42	1081.88
+us-west-2	i-a2f5e8a8	c3.xlarge	usorlzdaprd24	Data API	Production	Eliza	151.2	17.7467	5.99764	7.5				
+us-west-2	i-b59990bf	c3.xlarge	usorlzkmprd01	Kafka	Production	Eliza	151.2	13.55	3.40497	7.5	93.8538	92.4472	563.913	6902.37
+us-west-2	i-b6c3d042	r3.8xlarge	usorlzcbprd01	Couchbase	Production	Eliza	2016	37.0433	11.242	244	68.3299	67.8116	79339	167144
+us-west-2	i-ca1230c1	c3.large	usorlzpxprd03	Proxy	Production	Eliza	75.6	39.9567	4.59699	3.75	8.182	7.9728	3459.46	299.711
+us-west-2	i-d0fae7da	c3.xlarge	usorlzdaprd29	Data API	Production	Eliza	151.2	17.23	6.0926	7.5				
+us-west-2	i-d9f4e9d3	c3.xlarge	usorlzdaprd20	Data API	Production	Eliza	151.2	17.0933	6.1491	7.5				
+eu-west-1	i-b1054c55	c3.large	euirlzzkprd03	Zookeeper	Production	Eliza	86.4	22.2	1.58431	3.75	15.189	12.239	3298.63	460.019
+us-east-1	i-40749ce9	r3.xlarge	usvaolo1prd	OptLite	Production	Optimization	432	44.1383	3.49425	30.5				
+us-east-1	i-3b1a6e5b	m1.xlarge	USE-OPT-STG-01	OptLite	Staging	Optimization	430.56	3.73667	0.776383	15				
+us-east-1	i-38d896c8	c3.2xlarge	usvaollpprd01	OptLite	Production	Optimization	302.4	30.2717	0.966966	15	66.9733	59.6734	6053.26	8957.31
+us-east-1	i-37ef711a	c3.4xlarge	CDH-DEV	CDH	Development	Data	604.8	64.0417	9.67424	30				
+us-east-1	i-3776ffe1	m3.large	usvaopnsprd01	Opt	Production	Optimization	100.8	22.6267	1.18905	7.5	30.1129	28.6331	5328.63	2137.9
+us-east-1	i-36ef711b	c3.4xlarge	CDH-DEV	CDH	Development	Data	604.8	64.035	10.8057	30				
+us-west-2	i-e44ba013	m1.large	usorlumqprd01	MQ	Production	Lucy	126	31.8517	1.90653	7.5	89.8951	88.5596	859.994	6657.19
+us-east-1	i-34402ae4	c3.xlarge	usvavdlgprd	Logger service	Production	Lucy	270.72	38.07	3.17255	7.5				
+us-east-1	i-304fe3e7	c3.2xlarge	usvaollpprd04	OptLite	Production	Optimization	302.4	30.295	0.837513	15	67.8399	60.3392	5953.31	9057.26
+ap-northeast-1	i-0b58ec0d	t1.micro	PROD-APNE-01			Systems	18.72	100	10.0464	0.613				
+us-east-1	i-2e44870e	t1.micro	CHD-VPN			MIS	14.4	84.1667	3.26355	0.613	12.9151	12.3429	517.324	72.8441
+us-east-1	i-2c85ea01	c3.xlarge	CDH-DEV-JUMPBOX	CDH	Development	Data	151.2	11.1333	0.28158	7.5				
+us-east-1	i-27fd4206	m1.medium	PROD-USE-AD-02			Systems	107.28	10.3067	0.992485	3.75	44.7	44.6232	2126.25	1713.35
+us-east-1	i-2502de05	c3.large	usvagirvinf01			Systems	75.6	1.355	0.115284	3.75	2.70655	2.65913	3653.12	99.7948
+us-east-1	i-205b0bca	c3.xlarge	usvagijkinf-cloud	Jenkins	Internal	Lucy	151.2	4.36167	3.1387	7.5				
+us-east-1	i-1da17b30	m3.xlarge	GIO-DSP-STG-01	DSP	Staging	Maya	383.04	54.64	4.91586	15				
+us-east-1	i-14027c35	m1.small	USE-AFP-02-1c	MFS	Internal	MIS	54	60.975	5.30182	1.7				
+us-east-1	i-132bc7ef	r3.8xlarge	usvavlcbprd15	Couchbase	Production	Eliza	2016	8.67333	4.29186	244	76.5459	75.8834	59267.3	186486
+us-east-1	i-12fe35c4	c1.xlarge	usvaludbstg01	DB	Staging	Lucy	374.4	26.2283	6.1201	7	12.6162	11.1378	6233.3	781.27
+eu-west-1	i-a866494c	c3.xlarge	euirlzslprd02	Solr	Production	Eliza	172.08	0.715	0.273832	7.5	33.4047	33.3594	4975.58	2490.71
+eu-west-1	i-9e9c0ed4	m1.medium	EUW-GEODGE-01	GeoEdge	Production	MIS	107.28	20.6383	18.2369	3.75				
+eu-west-1	i-87360063	c3.xlarge	euirlzsmprd01	Storm	production	Eliza	172.08	10.9583	0.661964	7.5	32.2608	30.7801	5168.16	2298.13
+eu-west-1	i-734c7a97	c3.xlarge	euirlzsmprd02	Storm	production	Eliza	172.08	68.24	11.5755	7.5	48.8413	43.234	4238.31	3227.97
+eu-west-1	i-5ff41a1a	c3.large	SSU-EUW-Staging	SSU	Staging	Eliza	135.36	8.66167	2.10404	3.75				
+eu-west-1	i-5f4413bb	c3.large	euirlupxprd12	Proxy	Production	Lucy	86.4	11.5167	1.09345	3.75	87.5619	85.0663	562.747	3205.55
+eu-west-1	i-437094e9	c3.large	usirgiofcprd01	FortyCloud		MIS	86.4	9.375	0.495034	3.75				
+eu-west-1	i-22ca5f62	r3.8xlarge	euirvlcbprd01	Couchbase		Eliza	2246.4	5.22	1.50853	244	84.6277	84.569	37922.1	207831
+ap-southeast-1	i-fde77ad5	r3.8xlarge	apsgvlcbprd02	Couchbase	Production	Eliza	2419.2	4.375	0.972389	244	80.4524	80.3964	48176.6	197577
+ap-southeast-1	i-f3e77adb	r3.8xlarge	apsgvlcbprd05	Couchbase	Production	Eliza	2419.2	4.92	0.962391	244	79.8521	79.7838	49682	196071
+ap-southeast-1	i-eb8655c3	c3.xlarge	apsglzdiprd02	Data Ingest		Eliza	190.8	8.59667	0.71551	7.5	77.6798	76.7759	1704.14	5633.68
+ap-southeast-1	i-eb58cbc3	c3.2xlarge	apsglzmqprd02	ActiveMQ	Production	Eliza	380.88	0.406667	0.251044	15	47.8573	47.7449	7776.66	7105.46
+ap-southeast-1	i-dce29811	c3.xlarge	apsglzslprd02	Solr	Production	Eliza	190.8	9.83833	0.542192	7.5	55.0295	53.4843	3473	3993.29
+ap-southeast-1	i-d0116b1d	c3.xlarge	apsglzslprd01	Solr	Production	Eliza	190.8	9.29833	0.58736	7.5	56.4438	54.8825	3368.6	4097.68
+ap-southeast-1	i-ca85c407	c3.xlarge	apsglzdiprd03	Data Ingest	Production	Eliza	190.8	9.21167	0.887323	7.5	88.1887	86.7114	992.165	6474.12
+ap-southeast-1	i-ba91e577	c3.xlarge	apsglzkfprd02	Kafka	Production	Eliza	190.8	10.025	0.929544	7.5	22.5737	21.0568	5894.13	1572.16
+ap-southeast-1	i-ab6f4b66	c4.large	apsglzpdprd01	Proxy	Production	Eliza	109.44	8.43667	0.91066	3.75	30.7371	27.2009	2743.28	1025.01
+ap-southeast-1	i-989eea55	c3.xlarge	apsglzkfprd03	Kafka	Production	Eliza	190.8	9.52	0.998182	7.5	22.8136	21.3102	5875.21	1591.08
+ap-southeast-1	i-89d04ba1	r3.8xlarge	apsgvlcbprd06	Couchbase	Production	Eliza	2419.2	4.1	0.952425	244	80.0783	80.0233	49093.4	196660
+ap-southeast-1	i-6b8b7d40	c1.medium	apsevdseprd	SET service	Production	Eliza	191.52	9.84667	4.61007	1.7				
+ap-southeast-1	i-576c489a	c4.xlarge	apsglzdaprd04	Data API	production	Eliza	218.88	6.34167	1.78004	7.5	85.0052	82.8629	1282.5	6201.28
+ap-southeast-1	i-54661199	c3.large	apsglupxprd05	Proxy	Production	Lucy	95.04	9.72167	0.670448	3.75	87.4179	84.9441	567.351	3200.94
+us-east-1	i-41fb1e97	c3.xlarge	usvalzkfprd02	kafka	production	Eliza	151.2	3.455	1.41546	7.5	23.0237	22.7579	5767.12	1699.17
+us-east-1	i-4225886d	m1.large	GIO_NAT			MIS	126	16.865	10.5819	7.5				
+us-east-1	i-42799abe	c3.xlarge	usvavdadint_VPC	Adserver	Internal	Lucy	270.72	38.5617	4.34789	7.5				
+us-east-1	i-4915cb18	c1.xlarge	AdServer-OpenRTB	AdServer service	Staging	Maya	604.8	17.385	2.45515	7	64.9467	52.0046	3440.13	3727.49
+us-east-1	i-49b509b4	r3.4xlarge	usvaoplpprd03	Opt	Production	Optimization	1008	100	9.34898	122	16.8327	10.4628	110304	12889.5
+us-east-1	i-4c3dd1b0	r3.8xlarge	usvavlcbprd16	Couchbase	Production	Eliza	2016	10.0883	5.00193	244	78.3558	77.9011	54308.8	191445
+us-east-1	i-53effc29	m1.medium	GIO-USE-AD-02			Systems	107.28	5.12667	1.04118	3.75				
+us-east-1	i-54169fb8	t2.micro	MIS-Test			MIS	9.36	0.25	0.0247642	1				
+us-east-1	i-55b3d5af	c3.xlarge	usvagijkinf-cloud	Jenkins	Internal	Lucy	151.2	4.50167	3.30406	7.5				
+us-east-1	i-592dfa28	m1.medium	USE-OPT-Selenium-Smoke	Opt	Staging	Optimization	107.28	68.9267	6.71467	3.75				
+us-east-1	i-606644b7	r3.2xlarge	Dev-MSTR-ISvr-01	Microstrategy	Development	BI	777.6	2.61	0.381722	61				
+us-east-1	i-6359eb89	c3.large	usvalzsesbx02	Search	Sandbox	Eliza	75.6	35.5783	0.215564	3.75				
+us-east-1	i-651ca384	c3.large	usvalzdasbx01	Data API	Sandbox	Eliza	75.6	30.81	0.349539	3.75				
+us-east-1	i-6569f894	m3.large	usvalzpxprd03	Proxy	production	Eliza	100.8	18.4367	1.61413	7.5	64.9428	63.6519	2713.94	4752.58
+us-east-1	i-6c7097ba	c3.xlarge	usvalzzkprd03	zookeeper	staging	Eliza	151.2	14.5867	0.662228	7.5	30.9887	29.4776	5265.4	2200.88
+us-east-1	i-6daf7791	cc2.8xlarge	CDH-PROD-SERVICES	CDH	Production	Data	1440	6.53	1.50214	60.5	75.4832	74.4824	15579.6	45474.8
+us-east-1	i-6f73e316	m1.small	USE-LDAP01			MIS	54	5.90333	1.93913	1.7				
+us-east-1	i-70bf5c8d	c3.xlarge	usvalzdaprd11	Data API	production	Eliza	151.2	28.2167	8.53464	7.5	83.74	76.373	1764.06	5702.23
+us-east-1	i-73798159	m1.small	data01 (may terminate soon)	ETL	Production	Data	31.68	7.64333	0.0572797	1.7				
+us-east-1	i-740fe8a2	c3.xlarge	usvalzzkprd01	zookeeper	staging	Eliza	151.2	14.09	0.683735	7.5	30.8441	29.3067	5278.17	2188.12
+us-east-1	i-74e44c88	m3.2xlarge	CDH-PROD-CM	CDH	Production	Data	403.2	14.625	4.49878	30	50.2656	49.6756	15207.2	15011.1
+us-east-1	i-774a1e57	i2.2xlarge	usvamrisdev01	MicroStrategy	DEV	BI	1401.12	22.2817	2.4482	61	80.0767	75.7924	15129.7	47369.9
+us-east-1	i-812b9a71	c4.xlarge	usvamispaprod01	Palo Alto Networks	Production	MIS	167.04	13.1967	6.46087	7.5				
+us-east-1	i-893ae15e	c3.large	usvalupxprd13	Proxy	Production	Lucy	75.6	18.865	4.31952	3.75	89.3545	87.0267	488.874	3279.42
+us-east-1	i-8cfcce5b	c3.xlarge	usvalzzkstg02	zookeeper	staging	Eliza	151.2	13.6183	0.556558	7.5	11.2304	9.68437	6743.22	723.063
+us-east-1	i-917ba36d	m3.2xlarge	CDH-PROD-CM	CDH	Production	Data	403.2	5.34	0.923738	30	49.8962	49.3297	15311.7	14906.6
+us-east-1	i-985cdf66	r3.8xlarge	usvalzcbprd01	Couchbase	Production	Eliza	2016	19.1717	4.89784	244	68.7442	68.1089	78606.1	167877
+us-east-1	i-989b2bb9	c3.2xlarge	Prod-MSTR-WEB-02	MicroStrategy	Production	BI	541.44	9.41667	1.98883	15	28.6567	25.7873	11398.8	3960.83
+us-east-1	i-9ab86d4c	c3.2xlarge	usvaollpsbx01	OptLite	Sandbox	Optimization	302.4	27.4	0.64668	15	53.674	34.3115	9860.21	5150.36
+us-east-1	i-9ca000f8	c3.2xlarge	VSTE 2010 Agent	VSTE	QA	Lucy	541.44	14.73	9.03134	15				
+us-east-1	i-9daffe77	c3.2xlarge	usvzlzblinf01	Bamboo	Internal	Eliza	302.4	23.3217	1.40522	15				
+us-east-1	i-9faffe75	c3.2xlarge	usvalzblinf02	Bamboo	Internal	Eliza	302.4	4.81	1.41545	15				
+us-east-1	i-a062eb76	m3.large	usvaopmqsbx01	Opt	Sandbox	Optimization	100.8	20.1667	0.759716	7.5	64.8508	60.3512	2960.39	4506.14
+us-east-1	i-a2f877c7	m1.xlarge	USE-OPTLITE-QA-03	OptLite	QA	Optimization	430.56	61.6433	12.5858	15				
+us-east-1	i-a393eb75	c3.4xlarge	usvardcrstg01	RnD_GAP	Staging	RnD	604.8	3.71	0.117554	30	11.8234	11.2933	26699.9	3399.17
+us-east-1	i-a5806159	r3.8xlarge	usvavlcbprd23	Couchbase	Production	Eliza	2016	9.06833	4.8216	244	76.8524	76.0573	58840	186914
+us-east-1	i-a6f877c3	m1.xlarge	USE-OPTLITE-QA-02	OptLite	QA	Optimization	430.56	5.74833	3.6742	15				
+us-east-1	i-afca3906	r3.2xlarge	usvaoplpsbx02	Opt	Sandbox	Optimization	504	23.9883	2.34359	61	43.7348	10.9131	54843.6	6718.29
+us-east-1	i-b35997e1	c3.xlarge	usvagigtinf01	Stash	Sandbox	MIS	151.2	62.5883	3.64317	7.5				
+us-east-1	i-b7772147	c3.xlarge	usvalzkfstg01	Kafka	staging	Eliza	151.2	10.2083	0.796324	7.5	44.5118	42.9863	4256.8	3209.48
+us-east-1	i-c094f03d	r3.2xlarge	usvalzcbstg01	Couchbase	Staging	Eliza	504	1.81	1.13867	61	79.0382	78.8882	12972.3	48473.3
+us-east-1	i-c3cf3fa6	t1.micro	SMTP_GW_EAST01	SMTP	Production	Systems	14.4	35.6583	0.681362	0.613				
+us-east-1	i-c43ad738	r3.8xlarge	usvavlcbprd25	Couchbase	Production	Eliza	2016	9.09667	4.52469	244	78.1052	77.5892	55075.4	190678
+us-east-1	i-ca60de1c	r3.2xlarge	Prod-MSTR-ISvr-01	Microstrategy		BI	777.6	2.69333	0.466485	61				
+us-east-1	i-caac801d	c1.xlarge	usvalurhstg01	Request Handler	staging	Lucy	374.4	25.305	2.2303	7	87.4486	70.0319	2102.14	4912.44
+us-east-1	i-cc67e432	r3.8xlarge	usvalzcbprd06	Couchbase	Production	Eliza	2016	23.705	4.47123	244	69.7678	69.259	75771.3	170712
+us-east-1	i-cd88f730	m3.large	usvaolcmprd02	OptLite	Production	Optimization	100.8	75.99	5.69223	7.5	86.0338	83.2997	1246.93	6219.6
+ap-southeast-1	i-e4e99e29	c3.large	apsglupxprd04	Proxy	Production	Lucy	95.04	13.9367	3.17329	3.75	88.0063	85.4529	548.179	3220.11
+ap-southeast-1	i-f0e77ad8	r3.8xlarge	apsgvlcbprd03	Couchbase	Production	Eliza	2419.2	4.92167	1.00314	244	80.4656	80.4054	48154.4	197599
+eu-west-1	i-055448e3	c3.xlarge	euirlzwkprd02	OCS Slave	Production	Eliza	270.72	100	14.2042	7.5				
+eu-west-1	i-10580ff4	c3.large	euirlupxprd08	Proxy	Production	Lucy	86.4	18.0283	4.1796	3.75	87.3172	85.0976	561.568	3206.73
+eu-west-1	i-156f2855	r3.large	euirlzcbprd03	Couchbase		Eliza	140.4	10.3883	8.53643	15.25	7.94924	7.59745	13903.9	1143.19
+eu-west-1	i-1e4b7dfa	c3.xlarge	euirlzsmprd03	Storm	production	Eliza	172.08	66.25	11.0576	7.5	48.7342	43.1304	4246.05	3220.24
+eu-west-1	i-2c748b86	c4.xlarge	euirlzdiprd04	Data Ingest	Production	Eliza	190.08	6.15	0.644926	7.5	92.8311	91.7854	614.766	6869.02
+eu-west-1	i-53b886b6	m1.xlarge	ITV XSLT - Jeff #2	AdServer	Test	Lucy	430.56	33.835	6.21458	15				
+eu-west-1	i-5c4413b8	c3.large	euirlupxprd09	Proxy	Production	Lucy	86.4	14.555	3.71941	3.75	87.2231	85.0443	563.574	3204.72
+eu-west-1	i-d4074b30	c3.large	euirlzpxprd01	Proxy	production	Eliza	86.4	16.2333	0.968204	3.75	76.3264	73.7101	988.145	2770.5
+eu-west-1	i-e15e0905	c3.large	euirlupxprd03	Proxy	Production	Lucy	86.4	31.8733	15.5928	3.75	87.2413	84.6697	577.692	3190.6
+eu-west-1	i-f0980cb0	r3.8xlarge	euirvlcbprd04	Couchbase		Eliza	2246.4	4.64167	1.28127	244	84.7843	84.689	37627.2	208126
+eu-west-1	i-f6980cb6	r3.8xlarge	euirvlcbprd07	Couchbase		Eliza	2246.4	4.92167	1.33634	244	84.3831	84.304	38573.6	207180
+us-east-1	i-041212ff	c3.xlarge	usvagijkinf-cloud	Jenkins	Internal	Lucy	151.2	10.5	3.44713	7.5				
+us-east-1	i-050ad9d3	c1.xlarge	usvalucmsbx01	Campaign Manager	Sandbox	Lucy	374.4	24.155	2.14208	7	91.8911	85.8986	989.155	6025.42
+us-east-1	i-07844feb	m3.large	usvaolgwprd02	OptLite	Production	Optimization	100.8	21.9783	1.10205	7.5	87.7509	86.3897	1016.22	6450.31
+us-east-1	i-0adf90dd	m1.small	usvalumqstg01	Queue	Staging	Lucy	31.68	90.1417	6.27377	1.7	98.2776	92.9715	116.323	1538.69
+us-east-1	i-0bdfa458	m3.medium	GIO-LDAP-01			Systems	95.76	4.575	1.54198	3.75				
+us-east-1	i-0f0b2125	c3.2xlarge	usvadaapsbx01	ETL		Data	541.44	12.9	0.351021	15	24.415	15.0101	13054.1	2305.48
+us-east-1	i-171fc5c0	c3.xlarge	usvalzdaprd08	Data API	production	Eliza	151.2	27.6433	8.18527	7.5	83.8201	76.5383	1751.72	5714.57
+us-east-1	i-249444d9	c3.xlarge	usvavdaddev	AdServer service	Production	Maya	270.72	51.9217	8.05662	7.5				
+us-east-1	i-272cb1c8	c3.xlarge	usvavdaddev James	AdServer	Dev	Lucy	270.72	30.1533	3.82459	7.5				
+us-east-1	i-2bd749fd	c3.xlarge	usvalzdeploy	Couchbase		Eliza	270.72	13.5917	5.27959	7.5				
+us-east-1	i-2c48e6dd	m3.xlarge	usvagiblprd01	Build Server	Production	MIS	201.6	6.79	0.357048	15	46.8642	46.2155	8104.31	6963.79
+us-east-1	i-2e0539d4	c3.2xlarge	usvalzdastg01	Data API	Staging	Eliza	302.4	2.925	0.277564	15				
+us-east-1	i-2e4312f9	r3.large	usvaolmcprd02	OptLite	Production	Optimization	126	12.0267	0.728271	15.25	30.9617	30.2477	10691	4636.09
+us-east-1	i-2f4c05f8	c1.xlarge	usvaluuistg01	UI	Staging	Lucy	374.4	33.6567	0.89359	7	75.7079	66.1929	2371.42	4643.15
+us-east-1	i-309f4ccd	t2.micro	usvalzbbchefaws	Bamboo	Build	Eliza	9.36	0.968333	0.0254745	1				
+us-east-1	i-310ec2d0	m3.xlarge	usvagioprd01	chef	Production	Systems	201.6	21.705	8.86267	15	28.2279	26.2572	11069.6	3941.5
+us-east-1	i-34ab10de	c3.2xlarge	TeamCity Agent	Teamcity	Sandbox	MIS	541.44	0.735	0.527098	15				
+us-east-1	i-37b325c9	c3.large	usvalzpxprd01	Proxy	production	Eliza	75.6	15.9017	2.83197	3.75	29.9996	27.5671	2731.19	1039.46
+us-east-1	i-396cbf14	t2.micro	MIS-LinuxTraining			MIS	9.36	0.806667	0.020375	1				
+us-east-1	i-3d7078dc	c1.xlarge	usvalurhsbx01	Request Handler	sandbox	Lucy	374.4	16.4417	1.15228	7	85.5572	79.8398	1403.72	5559.1
+us-east-1	i-406f27bc	c3.xlarge	usvavdlgdev	Logger service	Development	Maya	270.72	36.735	3.09576	7.5				
+us-east-1	i-48aaeab8	m1.small	usvagioprd02	GIO_GAP	Production	Systems	31.68	95.5467	10.9595	1.7	44.039	37.1657	1040.05	615.177
+us-east-1	i-50f32987	c3.xlarge	usvalzdaprd06	Data API	production	Eliza	151.2	31.18	8.65962	7.5	83.7674	76.2615	1772.38	5693.9
+us-east-1	i-51302a86	m3.2xlarge	usvaopdgprd01	Opt	Production	Optimization	403.2	36.7867	1.88492	30	99.4922	97.664	703.132	29397
+us-east-1	i-51cc2987	c3.xlarge	usvalzkfprd03	kafka	production	Eliza	151.2	1.2	0.548752	7.5	21.6689	21.6325	5851.14	1615.15
+us-west-2	i-fbeaf90f	r3.8xlarge	usorlzcbprd02	Couchbase	Production	Eliza	2016	40.4517	11.9932	244	68.6443	68.1763	78439.9	168043
+us-west-2	i-f89c8f0c	r3.8xlarge	usorlzcbprd03	Couchbase	Production	Eliza	2016	30.0783	9.31995	244	68.5818	68.101	78625.7	167857
+us-west-2	i-f69dd4fd	c3.large	usorlzpxprd05	Proxy	Production	Eliza	75.6	3.23	1.98266	3.75				
+us-west-2	i-e00e20ed	c3.large	usorlzpxprd07	Proxy	Production	Eliza	75.6	2.005	1.00261	3.75	7.26312	7.18455	3489.09	270.08
+us-west-2	i-dbf4e9d1	c3.xlarge	usorlzdaprd21	Data API	Production	Eliza	151.2	16.5183	6.19017	7.5				
+us-west-2	i-d977ccd4	c3.large	usorlupxprd10	Proxy	Production	Lucy	75.6	15.165	3.63596	3.75	87.6938	85.2665	555.2	3213.09
+us-west-2	i-d877ccd5	c3.large	usorlupxprd13	Proxy	Production	Lucy	75.6	10.825	0.679741	3.75	87.7657	85.5773	543.491	3224.8
+us-west-2	i-b7298e40	r3.8xlarge	usorvlcbprd12	Couchbase	Production	Eliza	2016	7.34	3.57234	244				
+us-west-2	i-b1aba578	c3.xlarge	usorvdlgprd	Logger service	Production	Lucy	270.72	50.2917	13.7589	7.5				
+us-west-2	i-88dfc082	c3.xlarge	usorlzdaprd39	Data API	Production	Eliza	151.2	16.3667	6.15382	7.5				
+us-west-2	i-7eb4dc75	m3.xlarge	usorlzslprd03	Solr	Production	Eliza	201.6	17.11	7.77134	15	95.7635	95.5903	656.279	14226.3
+us-west-2	i-78088271	c3.large	usorlzpxprd01	Proxy	Production	Eliza	75.6	3.13667	1.82355	3.75	7.72638	7.61041	3473.08	286.088
+us-west-2	i-772bfc80	c3.large	usorvdsuprd	SSU	Production	Eliza	135.36	21.8033	6.97014	3.75				
+us-west-2	i-752bfc82	c3.large	usorvdsuprd	SSU	Production	Eliza	135.36	25.4	7.7173	3.75				
+us-west-2	i-718b0078	m1.small	usorlzuiprd01	Search	Production	Eliza	31.68	9.625	2.81688	1.7	14.899	14.6976	1412.39	243.354
+us-west-2	i-67fd766e	c3.xlarge	usorlzdaprd01	Data API	Production	Eliza	151.2	16.7617	5.84451	7.5				
+us-west-2	i-62dcc368	c3.xlarge	usorlzdaprd35	Data API	Production	Eliza	151.2	17.4867	6.09928	7.5				
+us-west-2	i-619fd66a	c3.large	usorlzpxprd06	Proxy	Production	Eliza	75.6	3.35333	2.07534	3.75				
+us-west-2	i-469fd64d	c3.xlarge	usorlzcmprd02	CM	Production	Eliza	151.2	13.2467	1.45919	7.5	81.91	81.1306	1384.6	5953.22
+us-west-2	i-39ddc233	c3.xlarge	usorlzdaprd37	Data API	Production	Eliza	151.2	15.9283	6.11052	7.5				
+us-west-2	i-3760293c	r3.8xlarge	usorvlcbprd05	Couchbase	Production	Eliza	2016	6.71	3.3329	244	78.8397	78.5883	52619.9	193134
+us-west-2	i-3560293e	r3.8xlarge	usorvlcbprd07	Couchbase	Production	Eliza	2016	7.47667	3.36514	244	78.9456	78.6092	52568.6	193185
+us-west-2	i-3460293f	r3.8xlarge	usorvlcbprd06	Couchbase	Production	Eliza	2016	7.00667	3.4429	244	78.6822	78.3362	53239.7	192514
+us-west-2	i-30f5e83a	c3.xlarge	usorlzdaprd22	Data API	Production	Eliza	151.2	17.8233	6.05911	7.5				
+us-west-2	i-26f6e4d2	r3.8xlarge	usorlzcbprd06	Couchbase	Production	Eliza	2016	40.825	11.6883	244	68.3663	67.9371	79029.6	167453
+us-west-2	i-1a0c2217	c3.large	usorlzpxprd08	Proxy	Production	Eliza	75.6	3.31833	2.03341	3.75				
+us-west-2	i-13d749e4	c4.large	usorlzpdprd01	Proxy	Production	Eliza	83.52	21.1283	8.17135	3.75	32.159	28.6297	2689.44	1078.85
+us-west-2	i-0a2aadfd	c4.large	usorlzjbprd01	Jobs	Production	Eliza	83.52	27.385	0.828899	3.75	65.0212	55.3468	1682.66	2085.63
+us-west-2	i-03257208	r3.8xlarge	usorvlcbprd08	Couchbase	Production	Eliza	2016	6.03833	3.24355	244	78.2076	77.8847	54349.1	191404
+us-west-2	i-02257209	r3.8xlarge	usorvlcbprd09	Couchbase	Production	Eliza	2016	6.17333	3.31276	244	77.6741	77.4038	55531	190222
+us-east-1	i-ffcdac10	c3.large	s2s010useast(s2s06)	S2S	Production	Lucy	135.36	16.9983	4.06903	3.75				
+us-east-1	i-f3f11425	c3.xlarge	usvalzkfprd01	kafka	production	Eliza	151.2	4.01333	2.10693	7.5	22.8131	22.6245	5777.08	1689.21
+us-east-1	i-eb46ff07	c3.large	usvavlpxuat01	Proxy	UA-Testing	Lucy	75.6	0.736667	0.0800324	3.75				
+us-east-1	i-eac04f90	m1.large	USEAST-DC-02-1e-INF	Windows 2008 R2 Domain Controller	VPC-ece35d87	MIS	215.28	4.45	2.13496	7.5				
+us-east-1	i-e1e6061d	r3.8xlarge	usvavlcbprd24	Couchbase	Production	Eliza	2016	9.00333	4.21991	244				
+us-east-1	i-e0488436	c3.xlarge	usvalzsmstg01	Storm	staging	Eliza	151.2	10.4883	0.445506	7.5	38.4638	37.0472	4700.23	2766.05
+us-east-1	i-df6cde35	c3.large	usvalzdisbx01	Data Ingest	Sandbox	Eliza	75.6	14.455	0.325163	3.75	47.2152	46.3939	2015.14	1744.03
+us-east-1	i-de8cd909	c1.medium	usvalupxstg01	Proxy	Staging	Lucy	93.6	27.085	1.02571	1.7	79.3604	74.801	427.055	1267.68
+us-east-1	i-de2f8621	c3.2xlarge	usvamisnxprd01	Nexus	Production	MIS	302.4	4.52833	0.293248	15	16.3094	14.4825	12867.2	2179.06
+us-east-1	i-dc9b6bac	c1.medium	USE-SSP-QA-01	DSP	QA	Maya	151.2	19.7433	11.9961	1.7				
+us-east-1	i-dab45727	c3.xlarge	usvalzdaprd10	Data API	production	Eliza	151.2	31.2433	8.77651	7.5	83.6149	76.3165	1768.28	5698
+us-east-1	i-d9063a23	c3.2xlarge	usvalzcmstg01	CM	Staging	Eliza	302.4	3.79167	0.435567	15				
+us-east-1	i-d8cf3028	c3.xlarge	usvalzdaprd04	Data API	production	Eliza	151.2	30.8767	8.3612	7.5	83.4724	77.9584	1645.69	5820.59
+us-east-1	i-d661c0fb	r3.8xlarge	usvavlcbprd10	Couchbase	Production	Eliza	2016	8.63167	4.371	244	81.9293	80.8235	47126.9	198627
+us-east-1	i-d4e2db25	c1.xlarge	usvalucmprd01	Campaign Manager	Production	Lucy	374.4	20.3733	2.84771	7	89.0711	87.1941	891.651	6071.17
+us-east-1	i-d047af20	m3.large	usvaolgwsbx01 OLD	OptLite	Sandbox	Optimization	100.8	6.47167	0.359291	7.5	36.1038	36.0773	4772.81	2693.72
+us-east-1	i-cee127e4	c3.2xlarge	gio-jenkins-build01	Jenkins		Lucy	302.4	0.156667	0.0095598	15				
+us-east-1	i-cd13cd9c	c1.xlarge	Loggers-OpenRTB	Logger service	Staging	Maya	604.8	15.2383	1.65447	7				
+us-east-1	i-caf2c01d	c3.xlarge	usvalzzkstg01	zookeeper	staging	Eliza	151.2	13.5367	0.618221	7.5	10.7185	9.10981	6786.12	680.164
+us-east-1	i-c840d324	r3.xlarge	usvavlcbtst01	Couchbase	Testing	Eliza	252	4.13	3.33893	30.5	42.7	42.5559	17479.1	12948.9
+us-east-1	i-c5fb2112	c3.xlarge	usvalzdaprd05	Data API	production	Eliza	151.2	30.3333	8.3875	7.5	84.4033	77.3419	1691.72	5774.57
+us-east-1	i-c532e912	c3.large	usvalupxprd14	Proxy	Production	Lucy	75.6	14.6083	3.4359	3.75	88.7292	86.609	504.613	3263.68
+us-east-1	i-c0f37e17	c3.xlarge	usvalzpxstg04	Proxy	staging	Eliza	151.2	8.07	0.27181	7.5	40.9393	39.6342	4507.08	2959.2
+us-east-1	i-c02efc16	m3.large	usvaoldasbx01	OptLite	Sandbox	Optimization	100.8	28.6617	0.756313	7.5	28.258	26.6463	5476.97	1989.56
+us-east-1	i-ba730ac5	m1.small	gio-build-selenium			Systems	54	55.76	10.7905	1.7				
+us-east-1	i-b7278b60	c3.2xlarge	usvaollpprd03	OptLite	Production	Optimization	302.4	30.1633	1.04425	15	67.2707	59.8275	6030.13	8980.44
+us-east-1	i-b69dfa66	r3.xlarge	usvaolo1prd	OptLite	Production	Optimization	432	42.995	3.72964	30.5				
+us-east-1	i-b68e6f1f	c4.xlarge	usvagiselinf01			Systems	286.56	16.445	2.5582	7.5				
+us-east-1	i-b0785a4c	r3.large	usvaolmcprd03	OptLite	Production	Optimization	126	12.05	0.698745	15.25	26.0327	25.2916	11450.6	3876.47
+us-east-1	i-aed70979	c3.xlarge	usvalzdastg02	Data API	staging	Eliza	151.2	10.5917	0.331594	7.5	43.9548	42.4166	4299.34	3166.94
+us-east-1	i-a6dc6671	m3.large	usvalzpxsbx03	Proxy	sandbox	Eliza	100.8	16.8483	0.546484	7.5	37.9454	36.8903	4712.1	2754.42
+us-east-1	i-a60cc070	c3.xlarge	usvalzsmsbx01	Storm	sandbox	Eliza	151.2	14.9917	0.474648	7.5	33.6975	31.9216	5082.92	2383.36
+us-east-1	i-a5f2030c	c4.large	usvalzpdprd02	Proxy	Production	Eliza	83.52	21.155	8.18482	3.75	32.2534	29.3478	2662.38	1105.91
+us-east-1	i-a2996652	c3.xlarge	usvalzdaprd02	Data API	production	Eliza	151.2	30.0583	8.55356	7.5	84.9844	77.7654	1660.1	5806.19
+us-east-1	i-9ea000fa	c3.2xlarge	VSTE 2010 Agent	VSTE	QA	Lucy	541.44	11.815	8.32416	15				
+us-east-1	i-9982ebcb	c3.large	GIO-OTRS	OTRS		MIS	75.6	4.55333	0.149537	3.75				
+us-east-1	i-9884dfc8	m3.medium	GIO-LDAP-02			Systems	95.76	3.83333	0.887334	3.75				
+us-east-1	i-95165978	t2.medium	OCS FTE Global Master	OCS Master	Production	Eliza	51.84	8.29833	2.79513	4				
+us-east-1	i-94df7ff0	c3.2xlarge	VSTE 2010 Agent	VSTE	QA	Lucy	541.44	15.6967	9.49386	15				
+us-east-1	i-91b408e9	c3.large	SSU-USE-Staging	SSU	Staging	Eliza	135.36	11.235	1.23645	3.75				
+us-east-1	i-91a0007b	c3.large	usvalzzksbx02	Zookeeper	Sandbox	Eliza	75.6	0.698333	0.0336028	3.75				
+us-east-1	i-91580946	r3.large	usvaolmcprd01	OptLite	Production	Optimization	126	12.6	0.712976	15.25	31.2812	30.6637	10627.2	4699.86
+us-east-1	i-90a27746	m3.large	usvaolmpsbx01	OptLite	Sandbox	Optimization	100.8	23.7867	0.835231	7.5	45.7892	30.7919	5167.45	2299.08
+us-east-1	i-90569a46	c3.xlarge	usvalzsmstg02	Storm	staging	Eliza	151.2	15.0267	5.01075	7.5	43.9801	41.0933	4398.14	3068.14
+us-east-1	i-8de2385a	c3.xlarge	usvalzdaprd07	Data API	production	Eliza	151.2	28.3217	8.53514	7.5	83.8228	76.8537	1728.17	5738.12
+us-east-1	i-8a05815d	m3.large	usvaolgwprd03	OptLite	Production	Optimization	100.8	43.2917	1.58043	7.5	81.5853	76.2634	1772.3	5694.23
+us-east-1	i-86cd2676	c1.xlarge	usvalogprd01	SysLog	Production	Systems	374.4	9.13	0.503442	7	10.0133	8.22135	6390.38	572.438
+us-east-1	i-856fe0f4	m1.xlarge	USE-QA-ADS-1	AdServer service	QA	Maya	430.56	70.0467	19.4538	15				
+us-east-1	i-83909b7f	m3.large	usvaopnssbx01	Opt	Sandbox	Optimization	100.8	21.3667	0.772396	7.5	30.8853	29.5122	5262.99	2203.54
+us-east-1	i-7f1b20a9	c3.2xlarge	usvagibasbx01	Bamboo-Agent	Sandbox	Systems	302.4	23.3417	1.40685	15	47.4492	43.683	8472.2	6571.55
+us-east-1	i-7ce42f90	m1.small	usvaolpxprd01	OptLite	Production	Optimization	31.68	95.8217	5.72737	1.7	49.3453	42.5904	973.134	721.937
+us-east-1	i-7a861894	cr1.8xlarge	Prod-MSTR-ISvr-01b	MicroStrategy	Production	BI	2758.32	41.415	7.42808	244	32.84	28.7665	178084	71916.1
+us-east-1	i-780339ae	t2.medium	usvamayadspstg01	DSP	Staging	Maya	37.44	0.758333	0.077789	4	27.4011	27.3495	2873.9	1081.89
+us-east-1	i-775202a0	c3.xlarge	usvamiscru01	Systems	Sandbox	MIS	151.2	11.315	2.23644	7.5	34.9085	33.4739	4967.03	2499.26
+us-east-1	i-75d08084	c3.xlarge	usvavdadint_VPC	Adserver	Internal	Lucy	270.72	53.5983	7.74439	7.5				
+us-east-1	i-75896a88	c3.xlarge	usvalzdaprd12	Data API	production	Eliza	151.2	28.2833	8.49437	7.5	84.1162	76.5379	1751.75	5714.54
+us-east-1	i-729441a4	m1.small	usvalumqsbx01	MQ	Sandbox	Lucy	31.68	97.995	4.72918	1.7	86.7708	81.6076	304.396	1350.62
+us-east-1	i-707ca1a6	m3.2xlarge	usvaoprpprd01	Opt	Production	Optimization	403.2	5.71167	0.341321	30	20.0585	19.7405	24158.2	5941.9
+us-east-1	i-6e6582b8	c3.xlarge	usvalzzkprd02	zookeeper	staging	Eliza	151.2	14.1633	0.671244	7.5	30.8783	29.3001	5278.66	2187.63
+us-east-1	i-60f6059d	r3.xlarge	usvaolo2uat	OptLite	Staging	Optimization	432	74.16	9.67499	30.5				
+us-east-1	i-60d4599e	c3.large	usvalzkzsbx02	Kafka	SandBox	Eliza	75.6	17.0833	4.64045	3.75	33.4131	30.3972	2624.47	1146.17
+us-east-1	i-5c14d88a	c3.xlarge	usvalzsmsbx02	Storm	sandbox	Eliza	151.2	43.4283	11.6898	7.5	31.8668	26.8131	5464.34	2001.95
+us-east-1	i-5a3a73aa	m3.large	usvaolmpprd02	OptLite	Production	Optimization	100.8	29.4867	1.52329	7.5	75.221	62.8334	2775.06	4691.47
+us-east-1	i-57b0d277	m1.xlarge	GIO-USE-01	FortyCloud		Systems	252	8.60667	1.19512	15	4.31124	4.28419	14338.3	641.776
+us-east-1	i-5462d0be	c3.large	usvalzdasbx02	Data API	Sandbox	Eliza	75.6	49.4283	0.376779	3.75				
+us-east-1	i-528051a2	c3.xlarge	usvalzdiprd01	Data Ingest	Production	Eliza	151.2	14.555	1.35043	7.5	85.4451	83.4018	1239.27	6227.01
+ap-northeast-1	i-9d06026e	c3.xlarge	apnevdlgprd	Logger service	Production	Lucy	332.64	34.05	2.9863	7.5				
+ap-southeast-1	i-22671aef	m1.large	apsglumqprd01	MQ	Production	Lucy	167.76	24.735	1.78417	7.5	83.4693	82.067	1348.06	6169.13
+ap-southeast-1	i-2d7532e0	r3.2xlarge	apsglzcbprd01	Couchbase	Production	Eliza	604.8	45.9367	9.04596	61	32.4233	31.529	42152.1	19409.8
+ap-southeast-1	i-32e5b9ff	c4.xlarge	apsglzdiprd04	Data Ingest	Production	Eliza	218.88	5.54833	0.602551	7.5	93.0138	91.7972	613.877	6869.9
+ap-southeast-1	i-3558bd1d	c3.large	PROD-APSE-01			Systems	95.04	9.5	0.754455	3.75				
+ap-southeast-1	i-3cd7aef1	c4.large	apsglupxprd01	Proxy	Production	Lucy	109.44	28.735	8.92522	3.75	88.9129	86.2413	518.468	3249.82
+ap-southeast-1	i-4a7ba586	c3.large	SSU-APSG-Staging	SSU	Staging	Eliza	171.36	10.19	2.13485	3.75				
+ap-southeast-1	i-521fa904	m1.small				Systems	41.76	7.9	0.363993	1.7	5.63379	5.15752	1571.48	85.4568
+ap-southeast-1	i-5f661192	c3.large	apsglupxprd02	Proxy	Production	Lucy	95.04	9.77833	0.783572	3.75	87.4697	85.166	558.989	3209.3
+ap-southeast-1	i-6995e1a4	c3.large	apsglzzkprd03	Zookeeper	Production	Eliza	95.04	17.2833	1.33708	3.75	16.1445	12.174	3301.07	457.579
+ap-southeast-1	i-9c27a150	r3.2xlarge	apsevdwoprd01	WhiteOps	Production	Lucy	604.8	8.02667	2.79788	61				
+ap-southeast-1	i-c4720509	c3.xlarge	apsglzsmprd01	Storm	Production	Eliza	190.8	8.71333	0.599098	7.5	44.5108	42.9798	4257.29	3208.99
+ap-southeast-1	i-d208771e	c3.xlarge	apsgvdlgprd	Logger service	Production	Lucy	343.44	45.9367	11.5838	7.5				
+eu-west-1	i-219d7a63	m1.xlarge	GIO-EUW-VPN			Systems	272.88	7.08167	1.06161	15	3.13577	3.08486	14518	462.116
+eu-west-1	i-17e428bd	c4.xlarge	euirlzdaprd04	Data API	production	Eliza	190.08	15.52	5.85702	7.5	84.7753	78.5723	1603.6	5880.18
+ap-southeast-1	i-fce77ad4	r3.8xlarge	apsgvlcbprd01	Couchbase	Production	Eliza	2419.2	5.08833	1.07176	244	80.0021	79.9405	49296.9	196457
+ap-southeast-1	i-f2e77ada	r3.8xlarge	apsgvlcbprd04	Couchbase	Production	Eliza	2419.2	4.82	0.962767	244	80.5505	80.4896	47947.5	197806
+ap-southeast-1	i-efadd922	c3.large	apsglzzkprd01	Zookeeper	Production	Eliza	95.04	17.0733	1.77118	3.75	16.0972	12.5705	3286.16	472.481
+ap-southeast-1	i-cbc814e3	c3.large	apsglzpxprd03	Proxy		Eliza	95.04	1.83833	0.888257	3.75	7.70735	7.5912	3473.81	285.366
+ap-southeast-1	i-c68655ee	c3.xlarge	apsglzdiprd01	Data Ingest		Eliza	190.8	8.08167	0.690273	7.5	76.94	76.078	1755.35	5582.47
+ap-southeast-1	i-a6a9dd6b	c3.large	apsglzzkprd02	Zookeeper	Production	Eliza	95.04	16.7533	1.43925	3.75	16.7288	13.2478	3260.71	497.938
+ap-southeast-1	i-6081a4ad	c3.large	apsglupxprd08	Proxy	Production	Lucy	95.04	14.8233	3.65288	3.75	32.8439	29.2589	2665.73	1102.56
+ap-southeast-1	i-54f79f99	c3.xlarge	apsglzdaprd01	Data API	production	Eliza	190.8	12.4317	1.16053	7.5	84.4599	82.253	1325.04	6141.24
+ap-southeast-1	i-54aef499	c3.xlarge	apselzwkprd01	OCS Slave	Production	Eliza	343.44	100	13.1782	7.5				
+ap-southeast-1	i-5121b59d	c3.2xlarge	apsglurhprd05	Request Handler	production	Lucy	380.88	30.1917	11.5993	15	74.3452	67.6516	4866.41	10177.3
+ap-southeast-1	i-4a2f7d87	c3.xlarge	apsgvdlgprd	Logger service	Production	Maya	343.44	46.985	11.4291	7.5				
+ap-southeast-1	i-49710684	c3.xlarge	apsglzsmprd02	Storm	Production	Eliza	190.8	57.8317	7.55489	7.5	45.6616	40.9183	4411.21	3055.07
+ap-southeast-1	i-304b3cfd	c3.xlarge	apsglzdaprd02	Data API	production	Eliza	190.8	12.2117	1.10867	7.5	84.1712	82.1236	1334.7	6131.58
+ap-southeast-1	i-2d97e3e0	c3.xlarge	apsglzkfprd01	Kafka	Production	Eliza	190.8	9.30833	0.957524	7.5	23.558	22.081	5817.65	1648.63
+ap-southeast-1	i-14fceade	r3.large	apsglzcbprd03	Couchbase	Production	Eliza	151.2	11.0333	8.91313	15.25	7.3634	7.26072	13954.6	1092.53
+ap-southeast-1	i-14bcd1d8	c3.large	apsgvdsuprd	SSU	Production	Eliza	171.36	37.805	14.5464	3.75				
+ap-northeast-1	i-b0020643	c3.xlarge	apnevdlgprd	Logger service	Production	Lucy	332.64	33.1683	2.9547	7.5				

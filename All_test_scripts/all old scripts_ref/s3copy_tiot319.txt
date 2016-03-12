@@ -1,0 +1,14 @@
+#!/bin/bash/
+dir=$1
+def_dir=/tmp/arpit/data/
+dir=${dir:-$def_dir}
+if [ ! -d "$dir" ]; then
+mkdir $dir
+chmod -R 777 $dir
+s3cmd sync  --skip-existing  s3://vg-s2s-us/FTP_Backup/Exelate/2015/ $dir
+else
+echo "copying files to local folder"
+s3cmd sync  --skip-existing  s3://vg-s2s-us/FTP_Backup/Exelate/2015/ $dir
+fi
+
+

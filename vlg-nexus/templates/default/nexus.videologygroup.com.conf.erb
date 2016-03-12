@@ -1,0 +1,10 @@
+ProxyRequests Off
+ProxyPreserveHost On
+
+<VirtualHost *:80>
+  ServerName http://<%=node[vlg-nexus']['public_ip]%>
+  ServerAlias nexus
+  ProxyPass /nexus/ http://localhost:8081/nexus
+  ProxyPassReverse /nexus/ http://localhost:8081/nexus
+  ProxyPassReverseCookiePath / /nexus
+</VirtualHost>

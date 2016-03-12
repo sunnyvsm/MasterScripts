@@ -1,0 +1,34 @@
+<<<BOUNCE Clearing>>>
+1> SCRIPT LOCATION 
+/home/arpit/script/bounce_clear.sh
+
+2>Argument to pass to the script
+	Datafile to clear the bounce data from
+	
+3> Nature of script
+. This script will get data file as input.
+. This script with help of sed will list all bounce mailids from bounce file and will dlete it from datafile all at once.
+. same operation will be carried out for other isps
+. Latter with the difference in line count of datafile before and after sed command , get the number of bounce data cleared from that file for respectiv isp
+
+SAMPLE OUTPUT
+---------------------------------------------------------------------------------------------------
+[root@mail-crackers bounce_data]# sh /home/arpit/script/bounce_clear.sh /tmp/bounce_clear/PID30001_20151102_4669_GAMY_PAYDAY_UK.csv
+Total Bounce data for ISP aol.com leared from file /tmp/bounce_clear/PID30001_20151102_4669_GAMY_PAYDAY_UK.csv = 43
+No bounce data for isp gmail.com found in /tmp/bounce_clear/PID30001_20151102_4669_GAMY_PAYDAY_UK.csv
+Total Bounce data for ISP hotmail.co.uk leared from file /tmp/bounce_clear/PID30001_20151102_4669_GAMY_PAYDAY_UK.csv = 2
+No bounce data for isp googlemail.com found in /tmp/bounce_clear/PID30001_20151102_4669_GAMY_PAYDAY_UK.csv
+No bounce data for isp hotmail.com found in /tmp/bounce_clear/PID30001_20151102_4669_GAMY_PAYDAY_UK.csv
+No bounce data for isp live.com found in /tmp/bounce_clear/PID30001_20151102_4669_GAMY_PAYDAY_UK.csv
+No bounce data for isp live.co.uk found in /tmp/bounce_clear/PID30001_20151102_4669_GAMY_PAYDAY_UK.csv
+No bounce data for isp msn.com found in /tmp/bounce_clear/PID30001_20151102_4669_GAMY_PAYDAY_UK.csv
+No bounce data for isp outlook.com found in /tmp/bounce_clear/PID30001_20151102_4669_GAMY_PAYDAY_UK.csv
+No bounce data for isp rocketmail.com found in /tmp/bounce_clear/PID30001_20151102_4669_GAMY_PAYDAY_UK.csv
+Total Bounce data for ISP yahoo.com leared from file /tmp/bounce_clear/PID30001_20151102_4669_GAMY_PAYDAY_UK.csv = 45
+No bounce data for isp yahoo.co.uk found in /tmp/bounce_clear/PID30001_20151102_4669_GAMY_PAYDAY_UK.csv
+No bounce data for isp ymail.com found in /tmp/bounce_clear/PID30001_20151102_4669_GAMY_PAYDAY_UK.csv
+
+
+-----------------------------------------------------------------------------------------------
+
+*****PLEASE LET ME KNOW IS NAY ISSUE IN SCRIPT OR MANUAL

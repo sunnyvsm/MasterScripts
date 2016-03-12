@@ -1,0 +1,23 @@
+i-1a761430	us-east-1c	usvaopmqsbx01	Optimization		c3.large	running	0.98%
+i-8df7b0de	us-east-1c	usvaolcmsbx01	Optimization		m3.large	running	6.71%
+i-28207402	us-east-1c	usvaollpsbx01	Optimization	Development	c3.xlarge	running	14.52%
+i-3fc8971e	us-east-1c	USE-SQL-OPT-TEST	Data		m1.xlarge	running	46.25%
+i-f66697d5	us-east-1a	Logger-OpenRTB	Maya		c1.xlarge	running	12.37%
+i-df0404fe	us-east-1c	USE-SQL-OPT-DEV	Data		m3.2xlarge	running	47.38%
+i-37700a64	us-east-1c	usvaolgwsbx01	Optimization		m3.large	running	9.97%
+i-fb6c9dd8	us-east-1a	AdServer-OpenRTB	Maya		c1.xlarge	running	18.70%
+i-9b1674b1	us-east-1c	usvaoprpsbx01	Optimization		m3.large	running	0.78%
+i-8eb224a3	us-east-1c	WebPageTest	Maya	Development	m3.medium	running	29.83%
+i-e335e2c3	us-east-1c	USE-SQL-DSP-TEST	Data		m1.xlarge	stopped	0.00%
+i-52780101	us-east-1c	GIO-QA-ADS-02	Systems		m1.xlarge	running	48.20%
+i-59f34378	us-east-1c	DEV-VPN-01b	Systems	Development	c3.large	running	8.80%
+i-d0a9c8f1	us-east-1c	usvamrisuat01	BI	UAT	i2.xlarge	running	85.15%
+i-f743bc8d	us-east-1c	GIO-DEV-AD-01	Systems		m1.medium	running	85.71%
+i-f86d39d2	us-east-1c	GIO-DEV-NAT	Systems		m1.small	running	5.30%
+i-885b3ff5	us-east-1c	DEV-SQL-UAT-01	Data		m2.xlarge	running	70.11%
+i-70710b23	us-east-1c	usvaolmpsbx01	Optimization		m3.large	running	7.79%
+i-5b686a3f	us-east-1c	ZD-VPC-DEV-VPN-01	Systems		t1.micro	running	27.06%
+i-0a640620	us-east-1c	usvaopdgsbx01	Optimization		m3.large	running	28.25%
+i-df8e658c	us-east-1c	GIO-ADS-QA-02	Systems		c1.xlarge	stopped	0.00%
+i-37bc0050	us-east-1c	ZD-VPC-VPC-NAT	Systems		m1.small	running	5.91%
+i-d15839f0	us-east-1c	usvamrwwuat01	BI		c3.xlarge	running	20.37%

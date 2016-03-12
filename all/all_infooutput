@@ -1,0 +1,234 @@
+i-e8f9508e	us-east-1c	usvalupx15	Lucy	Production	c1.medium	running	15.45%
+i-0aef5a24	us-east-1c	usvalzsb11	Eliza	Sandbox	c3.4xlarge	running	3.17%
+i-35a4f451	us-east-1c	usvalupx07	Lucy	Production	c1.medium	running	2.24%
+i-f6853da6	us-east-1c	usvalzcbstg0	Eliza	Production	cr1.8xlarge	running	0.56%
+i-42b88924	us-east-1c	usvalurh03	Lucy	Production	c1.xlarge	running	23.25%
+i-4f204c37	us-east-1c	usvalyrp01-win	Maya	Production	m1.small	stopped	0.00%
+i-96074cf2	us-east-1c	usvalupx06	Lucy	Production	c1.medium	running	29.97%
+i-4b1c1765	us-east-1c	usvalurhstg01	Lucy	Staging	c3.xlarge	running	17.95%
+i-c85e22a3	us-east-1c	usvalumq02	Lucy	Production	m1.large	running	2.61%
+i-4e120a28	us-east-1c	usvalzsb01	Eliza	Sandbox	m1.large	running	1.24%
+i-c8123826	us-east-1e	usvalutb02	Lucy	Testbox	c1.xlarge	running	0.71%
+i-827983ee	us-east-1c	usvaludg01	Lucy	Production	c1.medium	running	49.02%
+i-aa75a984	us-east-1c	usvalzrh07	Eliza	Production	c3.xlarge	running	29.25%
+i-a7c8d44c	us-east-1c	usvalzzesbx01	Eliza	Staging	c3.xlarge	running	0.18%
+i-a4c8d44f	us-east-1c	usvalzzesbx02	Eliza	Staging	c3.xlarge	running	0.18%
+i-d2bd9ef9	us-east-1c	usvalzpx06	Eliza		c3.large	running	26.79%
+i-1f097f78	us-east-1c	usvalurh19	Lucy	Production	c1.xlarge	running	21.84%
+i-45545f6b	us-east-1c	usvalzsb15	Eliza	Sandbox	m1.large	running	1.98%
+i-5d2c903a	us-east-1c	usvalurh23	Lucy	Production	c1.xlarge	running	26.40%
+i-89228df3	us-east-1c	usvalzpx03	Eliza	Production	c1.medium	running	33.64%
+i-f0f1b4a1	us-east-1c	usvalurpstg01	Lucy	Staging	c1.medium	running	1.17%
+i-ce4fc5aa	us-east-1c	usvalupx05	Lucy	Production	c1.medium	running	13.06%
+i-59f4e221	us-east-1c	usvalzsb09	Eliza	Sandbox	c1.xlarge	running	9.62%
+i-6c210d47	us-east-1c	usvalzpx09	Eliza		c3.large	running	19.57%
+i-0dc88d74	us-east-1c	usvalurh05	Lucy	Production	c1.xlarge	running	24.51%
+i-134f8ef2	us-east-1e	jp-chef-client-test			t1.micro	running	14.29%
+i-c34f0693	us-east-1c	usvalzrhprd04	Eliza		c3.xlarge	running	25.18%
+i-cfff19ee	us-east-1c	usvalzcb01	Eliza	Production	m2.4xlarge	running	2.16%
+i-e65348cd	us-east-1c	usvalzmqsbx02	Eliza	Sandbox	c1.xlarge	running	0.38%
+i-72e50b58	us-east-1c	usvaludg09	Lucy		c1.xlarge	running	0.22%
+i-3c3edfdd	us-east-1e	usvalutb04			m3.medium	running	0.86%
+i-17b55436	us-east-1c	usvalzrh12	Eliza	Production	c3.xlarge	running	2.31%
+i-58b8893e	us-east-1c	usvalurh15	Lucy	Production	c1.xlarge	running	28.98%
+i-d4955435	us-east-1e		Lucy	Production	m1.small	running	11.62%
+i-44b88922	us-east-1c	usvalurh07	Lucy	Production	c1.xlarge	running	29.21%
+i-7c88ab57	us-east-1c	usvalzrhprd13	Eliza		c3.xlarge	running	21.41%
+i-fec46080	us-east-1c	usvaludg06	Lucy	Production	c1.xlarge	running	1.50%
+i-7a109414	us-east-1c	usvaludv01-win	Lucy	Production	m3.xlarge	running	32.74%
+i-dbdd918a	us-east-1c	usvalzpx08	Eliza	Production	c1.medium	running	1.49%
+i-f449f2da	us-east-1c	usvalurh11	Lucy	Production	c1.xlarge	running	22.22%
+i-cff3039f	us-east-1c	usvalupx24	Lucy	Production	c3.large	running	11.96%
+i-b1b3249a	us-east-1c	usvalzsb16	Eliza		m1.xlarge	running	14.19%
+i-235a7872	us-east-1c	usvalupx22	Lucy	Production	c3.large	running	7.66%
+i-db71a08b	us-east-1c	usvaludbstg01	Lucy	Staging	c1.xlarge	running	6.40%
+i-c8c408e6	us-east-1c	usvalzcm01	Eliza	Production	m1.large	running	3.43%
+i-d9ff2633	us-east-1c	usvalzpx11	Eliza		c1.medium	running	35.54%
+i-15f23e7a	us-east-1d	usvavldm01	Maya	Production	m1.large	running	1.80%
+i-212b9671	us-east-1c	usvalzupstg01	Eliza	Staging	c3.xlarge	running	0.37%
+i-c988bab8	us-east-1c	usvalutm01	Lucy	Production	m2.4xlarge	running	18.69%
+i-2bbf9c00	us-east-1c	usvalzpx07	Eliza		c3.large	running	26.54%
+i-ad75a983	us-east-1c	usvalzrh08	Eliza	Production	c3.xlarge	running	28.27%
+i-0bc88d72	us-east-1c	usvalurh09	Lucy	Production	c1.xlarge	running	29.32%
+i-f49b64da	us-east-1c	usvalzpx05	Eliza	Production	c1.medium	running	34.67%
+i-895b08ec	us-east-1c	usvalupx09	Lucy	Production	c1.medium	running	8.75%
+i-6fd38d84	us-east-1c	usvalzdasbx02	Eliza	Sandbox	m3.large	running	0.63%
+i-cf7515e1	us-east-1c	usvalurh21	Lucy	Production	c1.xlarge	running	22.58%
+i-c86c13b4	us-east-1c	usvaopsb01	Optimization	Sandbox	m1.large	running	1.76%
+i-01e15451	us-east-1c	usvalzcmstg01	Eliza	Staging	c3.2xlarge	running	0.18%
+i-3078db56	us-east-1c	usvaoplpsbx01	Optimization	Sandbox	m2.2xlarge	running	85.71%
+i-c24114a9	us-east-1c	usvalusb04	Lucy	Sandbox	c1.xlarge	running	18.03%
+i-bbb291ea	us-east-1c	usvalupx20	Lucy	Production	c3.large	running	8.35%
+i-91ffd7ba	us-east-1c	usvalzrhprd16	Eliza		c3.xlarge	running	18.32%
+i-fbb16281	us-east-1c	usvalurh22	Lucy	Production	c1.xlarge	running	25.86%
+i-16067973	us-east-1c	usvalurp06	Lucy	Production	m2.xlarge	running	51.50%
+i-1ab554fb	us-east-1e	usvalutb03			c1.xlarge	stopped	0.00%
+i-c588abee	us-east-1c	usvalzrhprd12	Eliza		c3.xlarge	running	19.17%
+i-709f1720	us-east-1c	usvalurhtst89	Lucy	Production	c1.xlarge	running	2.05%
+i-87abbbaa	us-east-1c	usvalzmqdev02	Eliza	Development	m1.medium	running	1.87%
+i-47312dac	us-east-1c	usvalzzesbx03	Eliza	Sandbox	c3.xlarge	running	0.44%
+i-e8ee5bb8	us-east-1c	usvalzsestg01	Eliza	Staging	c3.large	running	0.71%
+i-ad5ddecd	us-east-1c	usvalzdg01	Eliza	Production	m1.large	running	55.20%
+i-74d48a9f	us-east-1c	usvalzdasbx03	Eliza	Sandbox	m3.large	running	0.64%
+i-e06bdeb0	us-east-1c	usvalzmqstg01	Eliza	Staging	c3.large	running	0.71%
+i-78c2b505	us-east-1c	usvaopsb04	Optimization	Sandbox	c1.medium	running	1.12%
+i-f42cfedf	us-east-1c	usvalupx25	Lucy		c3.large	running	7.30%
+i-7743210f	us-east-1c	usvalupx16	Lucy	Production	c1.medium	running	2.14%
+i-14594a39	us-east-1c	usvalzrhdev20	Eliza	Development	m1.medium	running	2.06%
+i-f511258d	us-east-1c	usvalzpx02	Eliza	Production	c1.medium	running	35.84%
+i-d0ffd7fb	us-east-1c	usvalzrhprd18	Eliza		c3.xlarge	running	18.54%
+i-2c1c3557	us-east-1c	usvalurp01	Lucy	Production	m2.2xlarge	running	33.43%
+i-ae10cf44	us-east-1c	usvaludm04	Lucy		m1.large	running	11.16%
+i-be292290	us-east-1c	usvaluuistg01	Lucy	Staging	c3.xlarge	running	10.72%
+i-f9c0ca9c	us-east-1c	usvalupx01	Lucy	Production	c1.medium	running	26.75%
+i-9db859bc	us-east-1c	usvalzrh13	Eliza	Production	c3.xlarge	running	2.35%
+i-8d83dee3	us-east-1c	awserp05	Lucy	Production	m1.large	running	16.51%
+i-8e260aa5	us-east-1c	usvalzpx10	Eliza		c3.large	running	25.21%
+i-c0915021	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-c2915023	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-c4915025	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-c7915026	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-c6915027	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-c9915028	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-c8915029	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-cb91502a	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-cd91502c	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-cf91502e	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-d7915036	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-d6915037	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-219150c0	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-209150c1	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-239150c2	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-229150c3	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-259150c4	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-279150c6	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-299150c8	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-289150c9	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-2b9150ca	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-2a9150cb	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-2d9150cc	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-2c9150cd	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-2f9150ce	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-2e9150cf	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-309150d1	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-339150d2	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-329150d3	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-349150d5	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-379150d6	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-369150d7	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-389150d9	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-3a9150db	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-3d9150dc	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-3c9150dd	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-3f9150de	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-3e9150df	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-059150e4	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-049150e5	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-079150e6	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-069150e7	us-east-1e		Lucy	Production	m1.large	running	14.29%
+i-6cc19617	us-east-1c	usvalupx08	Lucy	Production	c1.medium	running	32.29%
+i-550c4d24	us-east-1c	usvalusb02	Lucy	Sandbox	c1.xlarge	running	22.54%
+i-5bc81bb1	us-east-1c	usvalupx26	Lucy		c1.medium	running	29.14%
+i-a74ef589	us-east-1c	usvalurh02	Lucy	Production	c1.xlarge	running	19.85%
+i-de33daba	us-east-1c	usvalusb03	Lucy	Sandbox	c1.xlarge	running	15.98%
+i-da616ea1	us-east-1c	usvaluui01	Lucy	Production	c1.xlarge	running	5.95%
+i-6b41bd12	us-east-1c	usvalurp05	Lucy	Production	c1.xlarge	running	0.56%
+i-1142b4fb	us-east-1c	usvalzsb05	Eliza		c3.xlarge	running	9.22%
+i-c688abed	us-east-1c	usvalzrhprd14	Eliza		c3.xlarge	running	19.10%
+i-8bb732e3	us-east-1c	usvalupx04	Lucy	Production	c1.medium	running	1.75%
+i-fcc1bf85	us-east-1c	usvalurp02	Lucy	Production	m2.2xlarge	running	29.87%
+i-0cee2622	us-east-1c	usvalzrh11	Eliza	Production	c3.xlarge	running	27.64%
+i-bea7d2ce	us-east-1c	usvalumc01	Lucy	Production	m1.large	running	1.93%
+i-8bb390da	us-east-1c	usvalupx21	Lucy	Production	c3.large	running	12.37%
+i-144cf73a	us-east-1c	usvalurh01	Lucy	Production	c1.xlarge	running	26.34%
+i-ead8fbbb	us-east-1c	usvalzsb17	Eliza	Sandbox	c3.2xlarge	running	83.84%
+i-f3807fdd	us-east-1c	usvalzsb10	Eliza	Sandbox	m1.large	running	2.56%
+i-46b88920	us-east-1c	usvalurh18	Lucy	Production	c1.xlarge	running	24.73%
+i-75060d5b	us-east-1c	usvalumqstg01	Lucy	Staging	c3.large	running	1.30%
+i-5d7289b7	us-east-1c	usvalurh20	Lucy		c1.xlarge	running	20.32%
+i-90ffd7bb	us-east-1c	usvalzrhprd17	Eliza		c3.xlarge	running	19.21%
+i-1c4fbe4c	us-east-1c	usvalupx23	Lucy	Production	c3.large	running	11.85%
+i-2fcc797f	us-east-1c	usvalzdistg01	Eliza	Staging	c3.xlarge	running	0.37%
+i-703a3e16	us-east-1c	usvalupx02	Lucy	Production	c1.medium	running	6.31%
+i-f549f2db	us-east-1c	usvalurh14	Lucy	Production	c1.xlarge	running	29.76%
+i-014b8be0	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-004b8be1	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-034b8be2	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-054b8be4	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-074b8be6	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-104b8bf1	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-134b8bf2	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-124b8bf3	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-154b8bf4	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-144b8bf5	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-174b8bf6	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-164b8bf7	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-194b8bf8	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-1b4b8bfa	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-1a4b8bfb	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-1d4b8bfc	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-1c4b8bfd	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-1e4b8bff	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-e14f8f00	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-e04f8f01	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-e34f8f02	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-e24f8f03	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-e54f8f04	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-e44f8f05	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-e74f8f06	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-e94f8f08	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-e84f8f09	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-eb4f8f0a	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-ea4f8f0b	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-ed4f8f0c	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-ec4f8f0d	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-ee4f8f0f	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-f94f8f18	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-f84f8f19	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-fa4f8f1b	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-fd4f8f1c	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-fc4f8f1d	us-east-1e		Maya	Production	m1.large	running	14.29%
+i-a3c96cd9	us-east-1c	awserp11	Lucy	Production	c1.xlarge	running	17.79%
+i-d4e6f1ff	us-east-1c	usvalupxprd26	Lucy		c3.large	running	1.96%
+i-279cd606	us-east-1d	usvavldm01	Maya	Demo	c3.xlarge	running	1.34%
+i-d24221b6	us-east-1c	usvalupx19	Lucy	Production	c1.medium	running	1.66%
+i-26e7350d	us-east-1c	usvalzsb20	Eliza		c3.xlarge	running	2.05%
+i-c25ac029	us-east-1c	usvalzcmsbx02	Eliza	Sandbox	c3.xlarge	running	0.30%
+i-f876aad6	us-east-1c	usvalzrh09	Eliza	Production	c3.xlarge	running	27.55%
+i-da66f6ba	us-east-1c	awsedb01	Lucy	Production	m2.4xlarge	running	28.79%
+i-539fda23	us-east-1c	usvalusb06	Lucy	Sandbox	c1.medium	running	1.21%
+i-7f88ab54	us-east-1c	usvalzrhprd05	Eliza		c3.xlarge	running	21.01%
+i-1ffdda4e	us-east-1c	usvalzrh14	Eliza	Production	c3.xlarge	running	18.82%
+i-79432101	us-east-1c	usvalupx12	Lucy	Production	c1.medium	running	6.78%
+i-37c88d4e	us-east-1c	usvalurh04	Lucy	Production	c1.xlarge	running	33.57%
+i-af07e681	us-east-1c	usvalzsb07	Eliza	Sandbox	m1.large	running	30.74%
+i-eaf9508c	us-east-1c	usvalupx18	Lucy	Production	c1.medium	running	9.69%
+i-09c88d70	us-east-1c	usvalurh06	Lucy	Production	c1.xlarge	running	23.52%
+i-ca5e4724	us-east-1e	usvadmptst01			m3.medium	stopped	0.00%
+i-7c37e619	us-east-1c	usvalumq01	Lucy	Production	m1.large	running	7.00%
+i-f295a294	us-east-1c	usvalzsb03	Eliza	Sandbox	c1.xlarge	running	12.88%
+i-3aa31651	us-east-1c	usvaludm02	Lucy	Demo	m1.large	running	10.89%
+i-a25fbadf	us-east-1c	usvalupx14	Lucy	Production	c1.medium	running	41.88%
+i-ac75a982	us-east-1c	usvalzrh06	Eliza	Production	c3.xlarge	running	25.64%
+i-85d5cfe0	us-east-1c	usvalucm01	Lucy	Production	c1.xlarge	running	27.94%
+i-c55e4de8	us-east-1c	usvalzrhdev19	Eliza	Development	m1.medium	running	2.12%
+i-3b4c8cda	us-east-1e		Maya	Production	m1.small	running	11.19%
+i-e391b0cd	us-east-1c	usvalzsb04	Eliza	Sandbox	c1.xlarge	running	9.20%
+i-263c164a	us-east-1c	usvaludm05	Lucy	Demo	m1.large	running	3.76%
+i-6c37e609	us-east-1c	usvalurb01	Lucy	Production	m1.large	running	2.09%
+i-8842b263	us-east-1c	usvalurpstg02	Lucy	Staging	m1.large	running	0.83%
+i-7b432103	us-east-1c	usvalupx13	Lucy	Production	c1.medium	running	5.56%
+i-c04f0690	us-east-1c	usvalzrhprd02	Eliza		c3.xlarge	running	29.11%
+i-48e310a3	us-east-1c	usvalupxprd27	Lucy	Production	c1.medium	running	1.34%
+i-904057fc	us-east-1c	usvalzpx01	Eliza	Production	c1.medium	running	42.97%
+i-d6a85cba	us-east-1c	usvalydb01	Maya	Production	m2.4xlarge	running	0.70%
+i-ca40f8ac	us-east-1c	usvalurh17	Lucy	Production	c1.xlarge	running	31.56%
+i-9fdacbef	us-east-1c	usvalusb01	Lucy	Sandbox	c1.xlarge	running	13.96%
+i-ddfdd5f6	us-east-1c	usvalzrhprd15	Eliza		c3.xlarge	running	18.56%
+i-03c88d7a	us-east-1c	usvalurh12	Lucy	Production	c1.xlarge	running	26.92%
+i-772e2559	us-east-1c	usvalucmstg01	Lucy	Staging	c3.xlarge	running	8.46%
+i-6e05be40	us-east-1c	usvaludg02	Lucy	Production	c3.2xlarge	running	23.63%
+i-b14e07e1	us-east-1c	usvalzrhprd01	Eliza		c3.xlarge	running	21.61%
+i-7d432105	us-east-1c	usvalupx17	Lucy	Production	c1.medium	running	2.34%
+i-6842af0a	us-east-1c	usvalurp03	Lucy	Production	m2.2xlarge	running	13.46%
+i-17760070	us-east-1c	usvalurh08	Lucy	Production	c1.xlarge	running	25.56%
